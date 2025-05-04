@@ -2,16 +2,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const headerContainer = document.getElementById("header-container");
 
-  // Check if the nav element already exists
-  if (!document.querySelector("nav")) {
-    // Create and append the banner image
+  // Always create and append the banner image
+  if (!document.querySelector(".banner-img")) {
     const bannerImg = document.createElement("img");
     bannerImg.src = "https://raw.githubusercontent.com/deadlineastrology/deadlineastrology.github.io/refs/heads/main/assets/Finalbanner.png";
     bannerImg.alt = "Deadline Astrology Banner";
     bannerImg.style.width = "100%"; // Optional: make it responsive
     bannerImg.style.display = "block"; // Optional: remove default inline spacing
+    bannerImg.classList.add("banner-img"); // Add a class to ensure it's not duplicated
     headerContainer.appendChild(bannerImg);
+  }
 
+  // Check if the nav element already exists
+  if (!document.querySelector("nav")) {
     // Create the navigation bar
     const nav = document.createElement("nav");
     nav.innerHTML = `
