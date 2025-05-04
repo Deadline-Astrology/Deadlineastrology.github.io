@@ -1,125 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your astrology and tarot reading service, offering daily forecasts and personal readings.">
-    <title>Astrology & Tarot Forecasts</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deadline Astrology</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f2f1eb;
+      color: #1a1a1a;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 2rem;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      display: block;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #999;
+      padding-bottom: 0.5rem;
+    }
+
+    .forecast, .blog, .service, .shop {
+      margin-bottom: 2rem;
+    }
+
+    .blog-post, .service-item {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    video, img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <h1>Deadline Astrology</h1>
-            <p>Your Daily Guide to Spiritual Awakenings</p>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#shop">Shop</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    Deadline Astrology ⚖️🔮📡
+  </header>
 
-    <!-- Home Section with Daily Forecast and Blog News -->
-    <section id="home" class="home">
-        <div class="forecast">
-            <h2>Today's Astrology Forecast</h2>
-            <p>Stay tuned for today's astrological updates and tarot reading insights...</p>
-            <p><strong>Monday's Forecast:</strong> The Moon's energy encourages introspection today...</p>
-            <!-- Add mini videos or images -->
-            <div class="media">
-                <img src="forecast-image.jpg" alt="Astrology Forecast" class="forecast-image">
-                <video controls class="forecast-video">
-                    <source src="forecast-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Readings</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <!-- Latest Blog Posts -->
-        <div class="latest-news">
-            <h2>Latest Blog Posts</h2>
-            <article class="blog-post">
-                <h3><a href="blog-post1.html">The Power of Moon Phases in Your Life</a></h3>
-                <p>Discover how the moon's phases affect your emotional and spiritual growth...</p>
-                <img src="blog-image1.jpg" alt="Blog Image" class="blog-image">
-            </article>
-            <article class="blog-post">
-                <h3><a href="blog-post2.html">How Tarot Readings Can Guide Your Path</a></h3>
-                <p>Explore the ancient art of tarot and how it helps with self-reflection and decision-making...</p>
-                <img src="blog-image2.jpg" alt="Blog Image" class="blog-image">
-            </article>
-        </div>
-    </section>
+  <section id="home">
+    <h2>🗞️ This Week's Forecast</h2>
+    <div class="forecast">
+      <p><strong>Monday - Friday:</strong> Discover the daily cosmic codes. Moon in Leo this Monday brings courage — perfect time for bold moves. Tarot pull: The Sun ☀️ – illuminate your purpose.</p>
+      <video controls>
+        <source src="forecast-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>At Deadline Astrology, we offer spiritual guidance through astrology forecasts and tarot readings, designed to empower you on your journey of self-discovery.</p>
-        <p>Founded by Nicky, we combine the ancient wisdom of the stars with modern insights to bring clarity, healing, and inspiration to all who seek it.</p>
-    </section>
+    <h2>📰 Daily Astrology Blog</h2>
+    <div class="blog">
+      <div class="blog-post">
+        <h3>Venus Trine Neptune: Divine Romance</h3>
+        <p>A powerful day for heart-centered dreams. Light a candle and write your intentions for love. 💖</p>
+        <img src="venus-neptune.jpg" alt="Venus Trine Neptune" />
+      </div>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <h3>Personal Astrology Readings</h3>
-            <p>Get personalized astrology readings based on your unique birth chart. Discover what the stars say about your life's path.</p>
-        </div>
-        <div class="service">
-            <h3>Tarot Readings</h3>
-            <p>Receive a tailored tarot reading to gain insight into specific questions or challenges you're facing.</p>
-        </div>
-        <div class="service">
-            <h3>Moon Phase Yoga Plans</h3>
-            <p>Align your yoga practice with the current moon phase to maximize spiritual and physical benefits.</p>
-        </div>
-    </section>
+  <section id="about">
+    <h2>🧙‍♂️ About Saint Nicky JK</h2>
+    <p>Saint Nicky JK is a spiritual astrologer, tarot reader, and musician offering transformational insights through the stars and stories. Blending medieval myth, modern mysticism, and streetwise soul, he guides seekers to reclaim their unique cosmic path.</p>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>We'd love to hear from you! Whether you're interested in a reading, have questions, or want to collaborate, reach out to us.</p>
-        <form action="submit_form.php" method="post">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <section id="services">
+    <h2>🔮 Personal Readings & Services</h2>
+    <div class="service">
+      <div class="service-item">
+        <h3>✨ 1-on-1 Astrology Reading</h3>
+        <p>Deep dive into your birth chart & current transits. Gain clarity and purpose in your soul's mission.</p>
+      </div>
+      <div class="service-item">
+        <h3>🃏 Tarot & Moon Phase Forecast</h3>
+        <p>Receive weekly emailed readings synced to the moon's cycles for growth, magic, and shadow work.</p>
+      </div>
+      <div class="service-item">
+        <h3>🧘 Moon Yoga Plan</h3>
+        <p>Custom yoga practice aligned with current moon phase for body-spirit balance.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Shop Section -->
-    <section id="shop" class="shop">
-        <h2>Shop Our Products</h2>
-        <p>Explore our selection of astrology-inspired products, including tarot decks, crystals, and spiritual tools.</p>
-        <div class="shop-items">
-            <div class="item">
-                <img src="tarot-deck.jpg" alt="Tarot Deck" class="item-image">
-                <h4>Tarot Deck</h4>
-                <p>Enhance your readings with this custom-designed tarot deck.</p>
-                <button>Buy Now</button>
-            </div>
-            <div class="item">
-                <img src="astrology-chart.jpg" alt="Astrology Chart" class="item-image">
-                <h4>Personal Astrology Chart</h4>
-                <p>Get a detailed chart based on your birth date, time, and location.</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
-    </section>
+  <section id="shop">
+    <h2>🏺 The Mystic Shop</h2>
+    <p>Coming soon: Zodiac-themed merch, digital courses, and the official ‘Saint Nicky JK’ tarot card game.</p>
+  </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2025 Deadline Astrology. All rights reserved.</p>
-        <p>Follow us on social media: <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">Facebook</a></p>
-    </footer>
+  <section id="contact">
+    <h2>📬 Contact</h2>
+    <p>Email: <a href="mailto:deadlineastrology@gmail.com">deadlineastrology@gmail.com</a></p>
+    <p>Follow on Instagram: <a href="https://instagram.com/saintnickyjk" target="_blank">@saintnickyjk</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Deadline Astrology. All rights reserved.
+  </footer>
 </body>
 </html>
