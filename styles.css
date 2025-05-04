@@ -7,8 +7,8 @@
 
 body {
   font-family: 'UnifrakturCook', serif;
-  background-color: #006400; /* Emerald green */
-  color: #C0C0C0; /* Silver font */
+  background-color: #355E3B; /* Neutral Emerald Green */
+  color: #C0C0C0; /* Silver Font */
   line-height: 1.6;
   padding: 20px;
 }
@@ -17,7 +17,7 @@ header {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 20px;
-  border-bottom: 3px solid #800020; /* Burgundy border */
+  border-bottom: 3px solid #FFFFFF; /* White border */
   padding-bottom: 10px;
 }
 
@@ -26,9 +26,10 @@ nav {
   justify-content: center;
   gap: 20px;
   margin-bottom: 30px;
-  background-color: #004d00; /* Darker emerald */
+  background-color: #2E4B33; /* Darker Neutral Green */
   padding: 10px;
-  border: 2px solid #800020;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
 }
 
 nav a {
@@ -45,14 +46,14 @@ nav a:hover {
 section {
   margin-bottom: 40px;
   padding: 20px;
-  border: 2px solid #800020;
+  border: 2px solid #FFFFFF;
   border-radius: 10px;
-  background-color: #005000; /* Slightly lighter emerald */
+  background-color: #3E6545; /* Slightly lighter neutral green */
 }
 
 h2, h3 {
   color: #C0C0C0;
-  border-bottom: 1px solid #800020;
+  border-bottom: 1px solid #FFFFFF;
   padding-bottom: 5px;
 }
 
@@ -64,7 +65,7 @@ video, img {
   max-width: 100%;
   display: block;
   margin: 10px 0;
-  border: 2px solid #800020;
+  border: 2px solid #FFFFFF;
   border-radius: 5px;
 }
 
@@ -72,7 +73,7 @@ footer {
   text-align: center;
   margin-top: 40px;
   padding: 10px;
-  border-top: 2px solid #800020;
+  border-top: 2px solid #FFFFFF;
   font-size: 0.9rem;
   color: #C0C0C0;
 }
