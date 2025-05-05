@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const headerContainer = document.getElementById("header-container");
 
-  // Build HTML string for banner and nav
+  // Insert banner and navigation HTML
   headerContainer.innerHTML = `
     <a href="index.html">
       <img src="https://raw.githubusercontent.com/deadlineastrology/deadlineastrology.github.io/refs/heads/main/assets/Finalbanner.png"
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </nav>
   `;
 
-  // Add toggle functionality
+  // Toggle mobile menu
   const toggleButton = document.getElementById("menu-toggle");
   const nav = document.getElementById("main-nav");
 
@@ -27,15 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.toggle("open");
   });
 
-  // Set up active class functionality for menu links
+  // Highlight current page
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const links = document.querySelectorAll("#main-nav a");
+
   links.forEach(link => {
-    link.addEventListener("click", () => {
-      // Remove active class from all links
-      links.forEach(l => l.classList.remove("active"));
-      
-      // Add active class to clicked link
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
       link.classList.add("active");
+    }
+
+    // Collapse mobile menu when a link is clicked
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
     });
   });
 });
