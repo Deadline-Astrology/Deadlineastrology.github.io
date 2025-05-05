@@ -26,4 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleButton.addEventListener("click", () => {
     nav.classList.toggle("open");
   });
+
+  // Set up active class functionality for menu links
+  const links = document.querySelectorAll("#main-nav a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      // Remove active class from all links
+      links.forEach(l => l.classList.remove("active"));
+      
+      // Add active class to clicked link
+      link.classList.add("active");
+    });
+  });
 });
