@@ -32,6 +32,16 @@ header.hover-effect {
   border-bottom: 2px solid crimson;
 }
 
+/* === Hover Effect for Header Image === */
+.astro-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.astro-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px crimson;
+  border-color: crimson;
+}
 header img {
   width: 100%;
   height: auto;
