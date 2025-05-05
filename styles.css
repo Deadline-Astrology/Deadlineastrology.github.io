@@ -200,21 +200,64 @@ section p {
 }
 
 
-/* === Desktop Styles === */
+/* Desktop Styles */
 @media screen and (min-width: 769px) {
   #menu-toggle {
     display: none;
   }
 
   #main-nav {
-    display: flex !important;
+    display: flex;
     justify-content: center;
-    margin-top: 20px;
-    position: relative;
-    z-index: 1;
+    align-items: center;
+    gap: 30px;
+    margin: 20px auto;
+    padding: 10px 0;
+    background-color: rgba(51, 51, 51, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    max-width: 90%;
   }
 
   #main-nav a {
+    color: #fff;
     font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  #main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: crimson;
+  }
+
+  #main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 6px;
+    height: 2px;
+    background-color: crimson;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+
+  #main-nav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  #main-nav a.active {
+    color: crimson;
+  }
+
+  #main-nav a.active::after {
+    transform: scaleX(1);
   }
 }
