@@ -53,6 +53,17 @@ header img {
   text-align: center;
 }
 
+/* === Header Image Hover Effect === */
+.astro-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.astro-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px crimson;
+  border-color: crimson;
+}
+
 /* === Navigation === */
 nav {
   background-color: #333;
