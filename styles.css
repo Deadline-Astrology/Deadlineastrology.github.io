@@ -106,6 +106,12 @@ footer {
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
+  /* Ensure the background is dark on mobile */
+  body {
+    background-color: #000; /* Mobile background color */
+    color: #ccc; /* Text color for mobile */
+  }
+
   /* Hide the main nav and show hamburger menu on mobile */
   #main-nav {
     display: none;
@@ -120,7 +126,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #333;
+    background-color: #333; /* Mobile nav background */
     position: absolute;
     top: 70px; /* Adjust depending on the header height */
     left: 0;
@@ -129,7 +135,7 @@ footer {
   }
 
   #main-nav a {
-    color: #fff;
+    color: #fff;  /* Text color for links */
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid #444;
