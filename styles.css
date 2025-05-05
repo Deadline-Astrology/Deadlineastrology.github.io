@@ -1,13 +1,52 @@
-/* Default Menu Style */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'UnifrakturCook', serif;
+  background-color: #355E3B; /* Emerald Green */
+  color: #C0C0C0; /* Silver Text */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header Image Container */
+#header-container img {
+  width: 100%;
+  display: block;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Hamburger Button */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #C0C0C0;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+
+/* Navigation Styling */
 nav {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 30px;
-  background-color: #2E4B33; 
+  flex-wrap: wrap;
+  background-color: #2E4B33;
   padding: 10px;
   border: 2px solid #FFFFFF;
   border-radius: 5px;
+  margin-bottom: 30px;
 }
 
 nav a {
@@ -18,47 +57,67 @@ nav a {
 }
 
 nav a:hover {
-  color: #800020; 
+  color: #800020; /* Burgundy hover */
 }
 
-/* Collapsible Menu */
-.menu {
-  display: flex;
-  gap: 20px;
-  list-style-type: none;
+nav a.active {
+  text-decoration: underline;
 }
 
-.menu li {
-  margin: 0;
-}
-
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-}
-
-.hamburger {
-  font-size: 30px;
-  color: #C0C0C0;
-  display: block;
-}
-
+/* Responsive Nav */
 @media (max-width: 768px) {
-  .menu {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-  .menu li {
-    text-align: center;
-  }
-
-  .menu-toggle {
+  #menu-toggle {
     display: block;
   }
-  .menu.show {
-    display: block; /* Display menu when it's toggled */
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
   }
+
+  nav.open {
+    display: flex;
+  }
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  background-color: #3E6545;
+}
+
+/* Headings */
+h2, h3 {
+  color: #C0C0C0;
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  margin: 10px 0;
+}
+
+/* Media */
+video, img {
+  max-width: 100%;
+  display: block;
+  margin: 10px 0;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  border-top: 2px solid #FFFFFF;
+  font-size: 0.9rem;
+  color: #C0C0C0;
 }
