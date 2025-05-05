@@ -1,4 +1,4 @@
-/* General Reset */
+/* === Reset === */
 * {
   margin: 0;
   padding: 0;
@@ -7,150 +7,84 @@
 
 body {
   font-family: 'UnifrakturCook', serif;
-  line-height: 1.6;
   background-color: #000;
   color: #ccc;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
 }
 
-/* Header Container */
-#header-container {
-  text-align: center;
-  padding: 10px;
+/* === Header === */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1000;
 }
 
-/* Banner Image */
-#header-container img {
+header img {
   width: 100%;
   height: auto;
-  border: 2px solid #fff;
+  border: 2px solid white;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
-  transition: transform 0.4s ease;
 }
 
-#header-container img:hover {
-  transform: scale(1.02);
+#header-container {
+  text-align: center;
 }
 
-/* Menu Toggle Button (Hamburger) */
+/* === Navigation === */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+#main-nav a,
+nav a {
+  color: #fff;
+  padding: 15px;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#main-nav a.active,
+nav a.active {
+  color: crimson;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+/* === Toggle Button === */
 #menu-toggle {
   display: none;
-  font-size: 32px;
-  color: #fff;
+  font-size: 30px;
   background: none;
   border: none;
+  color: #fff;
   cursor: pointer;
-  margin: 10px 0;
-  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 10px;
+  transition: color 0.3s ease;
 }
 
 #menu-toggle:hover {
   color: crimson;
-  transform: rotate(90deg) scale(1.2);
-  text-shadow: 0 0 10px crimson;
 }
 
-/* Navigation */
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #111;
-  padding: 10px 0;
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
-  position: relative;
-  z-index: 1;
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 20px;
 }
 
-#main-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  transition: all 0.3s ease;
-}
-
-#main-nav a {
-  color: #fff;
-  padding: 15px 20px;
-  text-decoration: none;
-  font-size: 18px;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-#main-nav a::after {
-  content: '';
-  display: block;
-  height: 2px;
-  background: crimson;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: left;
-}
-
-#main-nav a:hover::after,
-#main-nav a.active::after {
-  transform: scaleX(1);
-}
-
-#main-nav a:hover {
-  color: crimson;
-}
-
-#main-nav a.active {
-  color: crimson;
-  font-weight: bold;
-}
-
-/* Mobile Navigation */
-@media screen and (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-
-  #main-nav {
-    display: none;
-    flex-direction: column;
-    background-color: #222;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 0 15px rgba(255,0,0,0.2);
-    animation: fadeInDown 0.4s ease;
-  }
-
-  #main-nav.open {
-    display: flex;
-  }
-
-  #main-nav a {
-    padding: 15px;
-    border-bottom: 1px solid #444;
-    font-size: 18px;
-    background: #111;
-  }
-
-  #main-nav a:last-child {
-    border-bottom: none;
-  }
-}
-
-/* Animation Keyframes */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Section Styling */
+/* === Sections === */
 section {
   margin: 20px;
   padding: 20px;
@@ -159,7 +93,6 @@ section {
 section h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #fff;
 }
 
 section p {
@@ -167,7 +100,6 @@ section p {
   line-height: 1.5;
 }
 
-/* Service Item */
 .service-item {
   background-color: #111;
   color: #eee;
@@ -175,7 +107,6 @@ section p {
   margin: 10px 0;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.05);
 }
 
 .service-item h3 {
@@ -183,18 +114,67 @@ section p {
   margin-bottom: 10px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  margin-top: 20px;
-  border-top: 1px solid #444;
-  box-shadow: 0 -2px 10px rgba(255,255,255,0.05);
+/* === Mobile Styles === */
+@media screen and (max-width: 768px) {
+  body.menu-open {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  #menu-toggle {
+    display: block;
+    margin: 10px auto 0;
+    font-size: 35px;
+  }
+
+  #main-nav {
+    display: none;
+  }
+
+  #main-nav.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #333;
+    position: fixed; /* <-- This ensures it overlays the content */
+    top: 70px;       /* Adjust based on header height */
+    left: 0;
+    right: 0;
+    z-index: 9999;   /* Higher than header/content */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #main-nav a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    font-size: 18px;
+  }
+
+  #main-nav a:last-child {
+    border-bottom: none;
+  }
+
+  #main-nav a:hover {
+    background-color: #444;
+    color: crimson;
+  }
 }
 
-/* Body dim on menu open */
-body.menu-open {
-  background-color: rgba(0, 0, 0, 0.9);
+/* === Desktop Styles === */
+@media screen and (min-width: 769px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  #main-nav {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  #main-nav a {
+    font-size: 18px;
+  }
 }
