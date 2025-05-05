@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const toggleButton = document.getElementById("menu-toggle");
   const nav = document.getElementById("main-nav");
-
+  const header = document.querySelector('header');  // Select header element
+  
   // Add animation class on toggle
   toggleButton.addEventListener("click", () => {
     nav.classList.toggle("open");
@@ -47,4 +48,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Function to add hover styles
+  function addHoverEffects() {
+    header.classList.add('hover-effect');
+  }
+
+  // Function to remove hover styles
+  function removeHoverEffects() {
+    header.classList.remove('hover-effect');
+  }
+
+  // Add hover effects on mouse enter
+  header.addEventListener('mouseenter', addHoverEffects);
+
+  // Remove hover effects on mouse leave
+  header.addEventListener('mouseleave', removeHoverEffects);
 });
