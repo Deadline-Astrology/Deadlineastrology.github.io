@@ -21,7 +21,7 @@ nav a {
 }
 
 nav a.active {
-  color: red; /* Highlight active link in red */
+  color: crimson; /* Highlight active link in crimson */
 }
 
 nav a:hover {
@@ -101,7 +101,7 @@ footer {
 
 /* Active menu link style */
 #main-nav a.active {
-  color: red; /* Change to desired active link color */
+  color: crimson; /* Change to crimson for active links */
 }
 
 /* Mobile Styles */
@@ -140,7 +140,7 @@ footer {
   }
 
   #main-nav a.active {
-    color: red; /* Active link stays red */
+    color: crimson; /* Active link stays crimson */
   }
 }
 
@@ -162,7 +162,7 @@ footer {
   }
 
   #main-nav a.active {
-    color: red;
+    color: crimson; /* Active link stays crimson on desktop */
   }
 }
 
