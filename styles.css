@@ -18,9 +18,18 @@ header {
   background-color: #222;
   color: #fff;
   padding: 20px 0;
-  position: relative;
-  z-index: 1000;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid transparent;
 }
+
+header:hover {
+  background-color: #1a1a1a;
+  box-shadow: 0 6px 18px rgba(220, 20, 60, 0.4);
+  border-bottom: 2px solid crimson;
+  transform: translateY(-2px);
+}
+
 
 header img {
   width: 100%;
