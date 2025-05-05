@@ -16,23 +16,106 @@
   <section id="services">
     <h2>🔮 Personal Readings & Services</h2>
     <div class="service">
+      <!-- Swift Insight Section -->
       <div class="service-item">
-        <h3>✨ 1-on-1 Astrology Reading</h3>
-        <p>Deep dive into your birth chart & current transits. Gain clarity and purpose in your soul's mission.</p>
+        <h3>⚡️ Swift Insight — $10</h3>
+        <p>One Question. One Clear Answer. Delivered to Your Inbox. Receive a personalized email reply and PDF summary within 24–48 hours.</p>
+        <div id="paypal-button-container-1" class="paypal-button-container"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+        <script>
+          paypal.Buttons({
+            createOrder: function (data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  amount: { value: '10.00' }
+                }]
+              });
+            },
+            onApprove: function (data, actions) {
+              return actions.order.capture().then(function (details) {
+                alert('Thank you for your purchase, ' + details.payer.name.given_name);
+              });
+            }
+          }).render('#paypal-button-container-1');
+        </script>
       </div>
+
+      <!-- Personal Tarot Reading Section -->
       <div class="service-item">
-        <h3>🃏 Tarot & Moon Phase Forecast</h3>
-        <p>Receive weekly emailed readings synced to the moon's cycles for growth, magic, and shadow work.</p>
+        <h3>🃏 Personal Tarot Reading — $55</h3>
+        <p>Unlimited questions, unlimited cards — your personal video reading and a beautifully designed PDF workbook to guide you.</p>
+        <div id="paypal-button-container-2" class="paypal-button-container"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+        <script>
+          paypal.Buttons({
+            createOrder: function (data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  amount: { value: '55.00' }
+                }]
+              });
+            },
+            onApprove: function (data, actions) {
+              return actions.order.capture().then(function (details) {
+                alert('Thank you for your purchase, ' + details.payer.name.given_name);
+              });
+            }
+          }).render('#paypal-button-container-2');
+        </script>
       </div>
+
+      <!-- Personal Astrology Reading Section -->
       <div class="service-item">
-        <h3>🧘 Moon Yoga Plan</h3>
-        <p>Custom yoga practice aligned with current moon phase for body-spirit balance.</p>
+        <h3>🔮 Personal Astrology Reading — $77</h3>
+        <p>Discover your cosmic blueprint with a personalized astrology reading, delivered with care and insight.</p>
+        <div id="paypal-button-container-3" class="paypal-button-container"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+        <script>
+          paypal.Buttons({
+            createOrder: function (data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  amount: { value: '77.00' }
+                }]
+              });
+            },
+            onApprove: function (data, actions) {
+              return actions.order.capture().then(function (details) {
+                alert('Thank you for your purchase, ' + details.payer.name.given_name);
+              });
+            }
+          }).render('#paypal-button-container-3');
+        </script>
+      </div>
+
+      <!-- Personal Astrology & Tarot Forecast Section -->
+      <div class="service-item">
+        <h3>🌕 Personal Astrology & Tarot Forecast — $144</h3>
+        <p>A complete spiritual journey through astrology and tarot, including a personalized PDF and video summary.</p>
+        <div id="paypal-button-container-4" class="paypal-button-container"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+        <script>
+          paypal.Buttons({
+            createOrder: function (data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  amount: { value: '144.00' }
+                }]
+              });
+            },
+            onApprove: function (data, actions) {
+              return actions.order.capture().then(function (details) {
+                alert('Thank you for your purchase, ' + details.payer.name.given_name);
+              });
+            }
+          }).render('#paypal-button-container-4');
+        </script>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Deadline Astrology. All rights reserved.
+    &copy; 2025 Deadline Astrology. All rights reserved. | <a href="mailto:your-email@example.com">Contact Us</a>
   </footer>
 </body>
 </html>
