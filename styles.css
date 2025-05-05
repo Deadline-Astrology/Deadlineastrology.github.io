@@ -8,14 +8,14 @@
 body {
   font-family: 'UnifrakturCook', serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #000;   /* Dark background for both mobile + desktop */
+  color: #ccc;              /* Light gray text for readability */
   padding: 0;
 }
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #ccc;              /* Lighter text color */
   padding: 10px 15px;
   display: inline-block;
 }
@@ -25,7 +25,7 @@ nav a.active {
 }
 
 nav a:hover {
-  color: #555;
+  color: #fff;  /* Hover effect for links to turn white */
 }
 
 /* Header styles */
@@ -183,10 +183,11 @@ section p {
 }
 
 .service-item {
-  background-color: #fff;
+  background-color: #111;  /* Darker background for consistency */
+  color: #eee;             /* Lighter text for readability */
+  border: 1px solid #555;
   margin: 10px 0;
   padding: 15px;
-  border: 1px solid #ddd;
   border-radius: 8px;
 }
 
