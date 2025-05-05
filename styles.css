@@ -114,51 +114,91 @@ section p {
   margin-bottom: 10px;
 }
 
-/* === Mobile Styles === */
+/* Mobile Styles */
 @media screen and (max-width: 768px) {
-  body.menu-open {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-
-  #menu-toggle {
-    display: block;
-    margin: 10px auto 0;
-    font-size: 35px;
+  body {
+    background-color: #000;
+    color: #ccc;
   }
 
   #main-nav {
     display: none;
   }
 
+  #menu-toggle {
+    display: block;
+    margin-top: 10px;
+    font-size: 35px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  #menu-toggle:hover {
+    color: crimson;
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   #main-nav.open {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #333;
-    position: fixed; /* <-- This ensures it overlays the content */
-    top: 70px;       /* Adjust based on header height */
-    left: 0;
-    right: 0;
-    z-index: 9999;   /* Higher than header/content */
-    transition: transform 0.3s ease-in-out;
+    align-items: center;
+    background: rgba(51, 51, 51, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    z-index: 9999;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 20px 0;
+    animation: slideDown 0.4s ease forwards;
+    transition: all 0.3s ease-in-out;
   }
 
-  #main-nav a {
+  #main-nav.open a {
+    width: 100%;
     text-align: center;
-    padding: 15px;
-    border-bottom: 1px solid #444;
+    padding: 15px 0;
     font-size: 18px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
   }
 
-  #main-nav a:last-child {
+  #main-nav.open a:last-child {
     border-bottom: none;
   }
 
-  #main-nav a:hover {
-    background-color: #444;
+  #main-nav.open a:hover {
+    color: crimson;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+  }
+
+  #main-nav.open a.active {
     color: crimson;
   }
+
+  body.menu-open {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
+
 
 /* === Desktop Styles === */
 @media screen and (min-width: 769px) {
