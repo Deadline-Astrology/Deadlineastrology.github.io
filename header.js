@@ -1,12 +1,12 @@
-// header.js
 document.addEventListener("DOMContentLoaded", () => {
   const headerContainer = document.getElementById("header-container");
 
   // Build HTML string for banner and nav
   headerContainer.innerHTML = `
-    <img src="https://raw.githubusercontent.com/deadlineastrology/deadlineastrology.github.io/refs/heads/main/assets/Finalbanner.png"
-         alt="Deadline Astrology Banner" style="width:100%; display:block; border:2px solid white; border-radius:10px; margin-bottom:20px;" />
-
+    <a href="index.html">
+      <img src="https://raw.githubusercontent.com/deadlineastrology/deadlineastrology.github.io/refs/heads/main/assets/Finalbanner.png"
+           alt="Deadline Astrology Banner" style="width:100%; display:block; border:2px solid white; border-radius:10px; margin-bottom:20px;" />
+    </a>
     <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
 
     <nav id="main-nav">
