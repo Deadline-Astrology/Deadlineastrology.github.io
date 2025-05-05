@@ -133,6 +133,32 @@ section p {
   margin-bottom: 10px;
 }
 
+/* === PayPal Button Styles === */
+.paypal-button-container {
+  width: 100%;
+  max-width: 300px; /* Set a max-width to make sure buttons are not too wide */
+  height: auto;
+  margin: 20px auto; /* Center the button */
+  display: block; /* Ensure it's not hidden */
+  position: relative;
+  z-index: 100; /* Ensure it's above other content */
+  padding: 10px;
+}
+
+/* Make sure buttons are visible */
+.paypal-button-container iframe {
+  width: 100% !important;
+  height: 50px !important; /* Adjust the height if needed */
+  border: none;
+}
+
+/* Optional: Make buttons responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .paypal-button-container {
+    max-width: 100%; /* Allow the button to be full-width on smaller screens */
+  }
+}
+
 /* === Mobile Styles === */
 @media screen and (max-width: 768px) {
   body {
@@ -285,4 +311,3 @@ a:focus, #menu-toggle:focus {
   outline: 2px solid crimson;
   outline-offset: 4px;
 }
-
