@@ -11,6 +11,7 @@ body {
   background-color: #000;   /* Dark background for both mobile + desktop */
   color: #ccc;              /* Light gray text for readability */
   padding: 0;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 nav a {
@@ -54,6 +55,7 @@ header img {
   color: #fff;
   cursor: pointer;
   padding: 10px;
+  transition: color 0.3s ease;
 }
 
 nav {
@@ -120,8 +122,20 @@ footer {
   #menu-toggle {
     display: block;
     margin-top: 10px;
+    font-size: 35px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
   }
 
+  /* Hamburger button hover effect */
+  #menu-toggle:hover {
+    color: crimson;
+  }
+
+  /* Open mobile nav */
   #main-nav.open {
     display: flex;
     flex-direction: column;
@@ -132,21 +146,38 @@ footer {
     left: 0;
     right: 0;
     z-index: 999;
+    transform: translateX(0); /* Ensure it starts off-screen */
+    transition: transform 0.3s ease-in-out; /* Smooth sliding transition */
   }
 
+  /* Menu items animation */
   #main-nav a {
     color: #fff;  /* Text color for links */
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid #444;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
   }
 
   #main-nav a:last-child {
     border-bottom: none;
   }
 
+  /* Hover effect for mobile menu links */
+  #main-nav a:hover {
+    background-color: #444;
+    color: crimson;
+  }
+
+  /* Active link style */
   #main-nav a.active {
     color: crimson; /* Active link stays crimson */
+  }
+
+  /* Background dimming effect when menu opens */
+  body.menu-open {
+    background-color: rgba(0, 0, 0, 0.6); /* Dim background */
   }
 }
 
