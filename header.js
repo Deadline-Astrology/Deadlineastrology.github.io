@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Collapse mobile menu when a link is clicked
     link.addEventListener("click", () => {
-      nav.classList.remove("open");
+      if (window.innerWidth <= 768) {
+        nav.classList.remove("open");
+      }
     });
   });
 });
