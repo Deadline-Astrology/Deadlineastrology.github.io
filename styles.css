@@ -25,13 +25,12 @@ header {
   z-index: 1000;
 }
 
-header:hover {
+header.hover-effect {
   background-color: #111;
   box-shadow: 0 8px 20px rgba(220, 20, 60, 0.5);
   transform: translateY(-2px);
   border-bottom: 2px solid crimson;
 }
-
 
 header img {
   width: 100%;
