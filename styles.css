@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'UnifrakturCook', serif;
+  font-family: 'UnifrakturCook', Georgia, serif; /* Added font fallback */
   background-color: #000;
   color: #ccc;
   line-height: 1.6;
@@ -34,34 +34,22 @@ header.hover-effect {
 
 /* === Hover Effect for Header Image === */
 .astro-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .astro-hover:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
   box-shadow: 0 0 20px crimson;
   border-color: crimson;
-}
-header img {
-  width: 100%;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 10px;
 }
 
 #header-container {
   text-align: center;
-}
-
-/* === Header Image Hover Effect === */
-.astro-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.astro-hover:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px crimson;
-  border-color: crimson;
 }
 
 /* === Navigation === */
@@ -145,7 +133,7 @@ section p {
   margin-bottom: 10px;
 }
 
-/* Mobile Styles */
+/* === Mobile Styles === */
 @media screen and (max-width: 768px) {
   body {
     background-color: #000;
@@ -230,8 +218,7 @@ section p {
   }
 }
 
-
-/* Desktop Styles */
+/* === Desktop Styles === */
 @media screen and (min-width: 769px) {
   #menu-toggle {
     display: none;
@@ -293,17 +280,9 @@ section p {
   }
 }
 
-.astro-hover {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 2px solid white;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+/* === Focus Styles for Accessibility === */
+a:focus, #menu-toggle:focus {
+  outline: 2px solid crimson;
+  outline-offset: 4px;
 }
 
-.astro-hover:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px crimson;
-  border-color: crimson;
-}
