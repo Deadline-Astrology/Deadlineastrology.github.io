@@ -1,52 +1,38 @@
-/* Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: 'UnifrakturCook', serif;
-  background-color: #355E3B;
+  background-color: #355E3B; /* Emerald green */
   color: #C0C0C0;
   line-height: 1.6;
   padding: 20px;
 }
 
-/* Banner image */
-#header-container img {
-  width: 100%;
-  display: block;
-  border: 2px solid white;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* Hamburger menu button */
 #menu-toggle {
   display: none;
-  background: none;
-  border: none;
   font-size: 2rem;
-  color: #C0C0C0;
+  background: none;
+  color: white;
+  border: none;
   cursor: pointer;
-  padding: 10px;
-  text-align: center;
-  margin: 0 auto 10px;
+  margin-bottom: 10px;
 }
 
-/* Nav Menu */
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  margin-bottom: 30px;
   background-color: #2E4B33;
   padding: 10px;
   border: 2px solid #FFFFFF;
   border-radius: 5px;
-  margin-bottom: 30px;
 }
 
 nav a {
@@ -60,28 +46,6 @@ nav a:hover {
   color: #800020;
 }
 
-nav a.active {
-  text-decoration: underline;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav.open {
-    display: flex;
-  }
-}
-
-/* Section */
 section {
   margin-bottom: 40px;
   padding: 20px;
@@ -90,12 +54,10 @@ section {
   background-color: #3E6545;
 }
 
-/* Headers */
 h2, h3 {
   color: #C0C0C0;
   border-bottom: 1px solid #FFFFFF;
   padding-bottom: 5px;
-  margin-bottom: 10px;
 }
 
 p {
@@ -110,7 +72,6 @@ video, img {
   border-radius: 5px;
 }
 
-/* Footer */
 footer {
   text-align: center;
   margin-top: 40px;
@@ -118,4 +79,21 @@ footer {
   border-top: 2px solid #FFFFFF;
   font-size: 0.9rem;
   color: #C0C0C0;
+}
+
+/* Responsive Hamburger */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.open {
+    display: flex;
+  }
 }
