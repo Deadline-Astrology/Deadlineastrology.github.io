@@ -8,55 +8,57 @@
 body {
   font-family: 'UnifrakturCook', sans-serif;
   line-height: 1.6;
-  background-color: #f0f0f0;
-  padding-top: 80px; /* Makes space for the fixed header */
+  background-color: #f4f4f4;
+  padding-top: 100px; /* Space for fixed header */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-h2, h3, h4 {
-  color: #333;
-  margin-bottom: 20px;
-}
-
-p {
-  color: #555;
-  font-size: 1.1em;
-}
-
-/* Header styles */
+/* Header */
 #header-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: 80px;
   background-color: #333;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 2em;
   z-index: 1000;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-header {
-  background: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.8em;
+#header-container h1 {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Home Section */
 #home {
-  padding: 20px;
+  padding: 50px 20px;
   text-align: center;
   background-color: #fff;
-  margin-top: 80px; /* Make sure content starts below fixed header */
+  margin-top: 80px; /* So header doesn't overlap */
+  animation: fadeIn 2s ease-in-out;
 }
 
 #home h2 {
   font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 #home p {
@@ -66,20 +68,24 @@ header {
 
 /* Services Section */
 #services {
-  padding: 20px;
+  padding: 60px 20px;
   background-color: #fff;
 }
 
 #services h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 20px;
   text-align: center;
+  color: #333;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .services-banner img {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
+  margin-bottom: 20px;
+  animation: fadeIn 3s ease-in-out;
 }
 
 .service {
@@ -87,29 +93,34 @@ header {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
+  animation: fadeIn 3s ease-in-out;
 }
 
 .service-item {
-  flex: 1 1 23%; /* Flexbox layout for 4 items per row */
-  min-width: 220px; /* Prevents too narrow items */
-  background-color: #f1f1f1;
+  flex: 1 1 23%; /* 4 items per row */
+  min-width: 250px;
+  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-item h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
+  color: #333;
 }
 
 .service-item p {
   font-size: 1em;
-  color: #333;
-  /* Reset potential vertical text styles */
-  writing-mode: unset;
-  transform: unset;
+  color: #666;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .service-item a {
@@ -120,18 +131,18 @@ header {
   border-radius: 5px;
   margin-top: 10px;
   display: inline-block;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .service-item a:hover {
   background-color: #444;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   margin-top: 40px;
 }
@@ -145,6 +156,12 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* PayPal Button Container */
+.paypal-button-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   #services .service {
@@ -153,14 +170,26 @@ footer a:hover {
   }
 
   .service-item {
-    flex: 1 1 100%; /* Items take full width on mobile */
+    flex: 1 1 100%;
     margin-bottom: 20px;
+  }
+
+  #home h2 {
+    font-size: 2em;
+  }
+
+  .service-item h3 {
+    font-size: 1.3em;
+  }
+
+  .service-item p {
+    font-size: 0.9em;
   }
 }
 
 @media (max-width: 480px) {
   #home h2 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
   
   .service-item h3 {
@@ -168,6 +197,6 @@ footer a:hover {
   }
 
   .service-item p {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 }
