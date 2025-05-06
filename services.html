@@ -4,75 +4,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services - Deadline Astrology</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0b0c10;
+      color: #f8f8f2;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h2, h3 {
+      font-family: 'UnifrakturCook', cursive;
+    }
+
+    #services {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    #services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .services-banner {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    .services-banner img {
+      max-width: 90%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+
+    .service-item {
+      background: #1f1f1f;
+      border-radius: 16px;
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .service-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .service-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #ffcb6b;
+    }
+
+    .service-item p {
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #111;
+      color: #aaa;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: #ffcb6b;
+      text-decoration: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
   <script src="header.js" defer></script>
 
-  <!-- PayPal SDK script to load the hosted buttons -->
+  <!-- PayPal SDK -->
   <script 
     src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD">
   </script>
 </head>
 
 <body>
-  <!-- Dynamic Header will load here -->
+  <!-- Dynamic Header -->
   <div id="header-container"></div>
 
   <section id="services">
     <h2>🔮 Personal Readings & Services</h2>
-    <div class="service">
 
-<div class="services-banner">
-  <img src="https://raw.githubusercontent.com/deadlineastrology/deadlineastrology.github.io/refs/heads/main/assets/Black%20and%20White%20Modern%20Fashion%20Magazine.png" alt="Services Banner">
-</div>   
-   <!-- Swift Insight Section -->
+    <div class="services-banner">
+      <img src="https://raw.githubusercontent.com/deadlineastrology/deadlineastrology.github.io/refs/heads/main/assets/Black%20and%20White%20Modern%20Fashion%20Magazine.png" alt="Services Banner">
+    </div>
+
+    <div class="service">
+      <!-- Swift Insight -->
       <div class="service-item">
         <h3>⚡️ Swift Insight — $10</h3>
         <p>One Question. One Clear Answer. Delivered to Your Inbox. Receive a personalized email reply and PDF summary within 24–48 hours.</p>
         <div id="paypal-container-YZ5HKL584LPUY"></div>
         <script>
-          paypal.HostedButtons({
-            hostedButtonId: "YZ5HKL584LPUY",
-          }).render("#paypal-container-YZ5HKL584LPUY");
+          paypal.HostedButtons({ hostedButtonId: "YZ5HKL584LPUY" }).render("#paypal-container-YZ5HKL584LPUY");
         </script>
       </div>
 
-      <!-- Personal Tarot Reading Section -->
+      <!-- Tarot Reading -->
       <div class="service-item">
         <h3>🃏 Personal Tarot Reading — $55</h3>
         <p>Unlimited questions, unlimited cards — your personal video reading and a beautifully designed PDF workbook to guide you.</p>
         <div id="paypal-container-AA6QGJM8BQU56"></div>
         <script>
-          paypal.HostedButtons({
-            hostedButtonId: "AA6QGJM8BQU56",
-          }).render("#paypal-container-AA6QGJM8BQU56");
+          paypal.HostedButtons({ hostedButtonId: "AA6QGJM8BQU56" }).render("#paypal-container-AA6QGJM8BQU56");
         </script>
       </div>
 
-      <!-- Personal Astrology Reading Section -->
+      <!-- Astrology Reading -->
       <div class="service-item">
         <h3>🔮 Personal Astrology Reading — $77</h3>
         <p>Discover your cosmic blueprint with a personalized astrology reading, delivered with care and insight.</p>
         <div id="paypal-container-8FZTG6C6GT6B4"></div>
         <script>
-          paypal.HostedButtons({
-            hostedButtonId: "8FZTG6C6GT6B4",
-          }).render("#paypal-container-8FZTG6C6GT6B4");
+          paypal.HostedButtons({ hostedButtonId: "8FZTG6C6GT6B4" }).render("#paypal-container-8FZTG6C6GT6B4");
         </script>
       </div>
 
-      <!-- Personal Astrology & Tarot Forecast Section -->
+      <!-- Forecast Combo -->
       <div class="service-item">
-        <h3>🌕 Personal Astrology & Tarot Forecast — $144</h3>
+        <h3>🌕 Astrology & Tarot Forecast — $144</h3>
         <p>A complete spiritual journey through astrology and tarot, including a personalized PDF and video summary.</p>
         <div id="paypal-container-BTM5RW8GGT7US"></div>
         <script>
-          paypal.HostedButtons({
-            hostedButtonId: "BTM5RW8GGT7US",
-          }).render("#paypal-container-BTM5RW8GGT7US");
+          paypal.HostedButtons({ hostedButtonId: "BTM5RW8GGT7US" }).render("#paypal-container-BTM5RW8GGT7US");
         </script>
       </div>
-
     </div>
   </section>
 
