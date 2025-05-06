@@ -9,7 +9,34 @@ body {
   font-family: 'UnifrakturCook', sans-serif;
   line-height: 1.6;
   background-color: #f0f0f0;
-  padding-top: 80px; /* Push content down to make space for fixed banner */
+  padding-top: 80px; /* Makes space for the fixed header */
+}
+
+h2, h3, h4 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+/* Header styles */
+#header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  z-index: 1000;
+  text-align: center;
 }
 
 header {
@@ -20,35 +47,12 @@ header {
   font-size: 1.8em;
 }
 
-footer {
-  background: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  margin-top: 40px;
-}
-
-/* Fix for the header (fixed banner) */
-#header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px; /* Set height of the banner */
-  background-color: #333;
-  color: white;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-}
-
-/* Home Section Styling */
+/* Home Section */
 #home {
   padding: 20px;
   text-align: center;
   background-color: #fff;
+  margin-top: 80px; /* Make sure content starts below fixed header */
 }
 
 #home h2 {
@@ -60,7 +64,7 @@ footer {
   color: #555;
 }
 
-/* Services Section Styling */
+/* Services Section */
 #services {
   padding: 20px;
   background-color: #fff;
@@ -73,21 +77,21 @@ footer {
 }
 
 .services-banner img {
-  width: 100%; /* Responsive image */
-  max-height: 400px; /* Optional: Adjust the max-height if needed */
+  width: 100%;
+  max-height: 400px;
   object-fit: cover;
 }
 
 .service {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .service-item {
-  flex: 1 1 23%; /* Flexible width */
-  min-width: 220px; /* Prevents items from becoming too narrow */
+  flex: 1 1 23%; /* Flexbox layout for 4 items per row */
+  min-width: 220px; /* Prevents too narrow items */
   background-color: #f1f1f1;
   padding: 20px;
   border-radius: 8px;
@@ -103,16 +107,67 @@ footer {
 .service-item p {
   font-size: 1em;
   color: #333;
-  /* Reset possible vertical text styles */
+  /* Reset potential vertical text styles */
   writing-mode: unset;
   transform: unset;
 }
 
-/* Footer Styling */
-footer {
-  margin-top: 40px;
-  padding: 20px;
+.service-item a {
+  text-decoration: none;
   background-color: #333;
   color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.service-item a:hover {
+  background-color: #444;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
   text-align: center;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  #services .service {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    flex: 1 1 100%; /* Items take full width on mobile */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #home h2 {
+    font-size: 2em;
+  }
+  
+  .service-item h3 {
+    font-size: 1.2em;
+  }
+
+  .service-item p {
+    font-size: 0.9em;
+  }
 }
