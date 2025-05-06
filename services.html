@@ -1,82 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services - Deadline Astrology</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- Link to your external stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Dynamic Header Script -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <script src="header.js" defer></script>
-
-  <!-- PayPal SDK -->
-  <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD">
-  </script>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 </head>
-
 <body>
-  <!-- Dynamic Header -->
   <div id="header-container"></div>
-
   <section id="services">
     <h2>🔮 Personal Readings & Services</h2>
 
-    <div class="services-banner">
-      <img src="https://raw.githubusercontent.com/deadlineastrology/deadlineastrology.github.io/refs/heads/main/assets/Black%20and%20White%20Modern%20Fashion%20Magazine.png" alt="Services Banner">
+    <div class="service-item">
+      <h3>⚡️ Swift Insight — $10</h3>
+      <p>One clear answer to one key question. PDF + email in 48 hrs.</p>
+      <div id="paypal-container-YZ5HKL584LPUY"></div>
+      <script>paypal.HostedButtons({ hostedButtonId: "YZ5HKL584LPUY" }).render("#paypal-container-YZ5HKL584LPUY");</script>
     </div>
 
-    <div class="service">
-      <!-- Swift Insight -->
-      <div class="service-item">
-        <h3>⚡️ Swift Insight — $10</h3>
-        <p>One Question. One Clear Answer. Delivered to Your Inbox. Receive a personalized email reply and PDF summary within 24–48 hours.</p>
-        <div id="paypal-container-YZ5HKL584LPUY"></div>
-        <script>
-          paypal.HostedButtons({ hostedButtonId: "YZ5HKL584LPUY" }).render("#paypal-container-YZ5HKL584LPUY");
-        </script>
-      </div>
+    <div class="service-item">
+      <h3>🃏 Tarot Reading — $55</h3>
+      <p>Unlimited questions, custom video + workbook.</p>
+      <div id="paypal-container-AA6QGJM8BQU56"></div>
+      <script>paypal.HostedButtons({ hostedButtonId: "AA6QGJM8BQU56" }).render("#paypal-container-AA6QGJM8BQU56");</script>
+    </div>
 
-      <!-- Tarot Reading -->
-      <div class="service-item">
-        <h3>🃏 Personal Tarot Reading — $55</h3>
-        <p>Unlimited questions, unlimited cards — your personal video reading and a beautifully designed PDF workbook to guide you.</p>
-        <div id="paypal-container-AA6QGJM8BQU56"></div>
-        <script>
-          paypal.HostedButtons({ hostedButtonId: "AA6QGJM8BQU56" }).render("#paypal-container-AA6QGJM8BQU56");
-        </script>
-      </div>
+    <div class="service-item">
+      <h3>🔮 Astrology Reading — $77</h3>
+      <p>Unpack your birth chart & cosmic blueprint.</p>
+      <div id="paypal-container-8FZTG6C6GT6B4"></div>
+      <script>paypal.HostedButtons({ hostedButtonId: "8FZTG6C6GT6B4" }).render("#paypal-container-8FZTG6C6GT6B4");</script>
+    </div>
 
-      <!-- Astrology Reading -->
-      <div class="service-item">
-        <h3>🔮 Personal Astrology Reading — $77</h3>
-        <p>Discover your cosmic blueprint with a personalized astrology reading, delivered with care and insight.</p>
-        <div id="paypal-container-8FZTG6C6GT6B4"></div>
-        <script>
-          paypal.HostedButtons({ hostedButtonId: "8FZTG6C6GT6B4" }).render("#paypal-container-8FZTG6C6GT6B4");
-        </script>
-      </div>
-
-      <!-- Forecast Combo -->
-      <div class="service-item">
-        <h3>🌕 Astrology & Tarot Forecast — $144</h3>
-        <p>A complete spiritual journey through astrology and tarot, including a personalized PDF and video summary.</p>
-        <div id="paypal-container-BTM5RW8GGT7US"></div>
-        <script>
-          paypal.HostedButtons({ hostedButtonId: "BTM5RW8GGT7US" }).render("#paypal-container-BTM5RW8GGT7US");
-        </script>
-      </div>
+    <div class="service-item">
+      <h3>🌕 Tarot & Astrology Combo — $144</h3>
+      <p>Full spiritual roadmap in video + custom PDF.</p>
+      <div id="paypal-container-BTM5RW8GGT7US"></div>
+      <script>paypal.HostedButtons({ hostedButtonId: "BTM5RW8GGT7US" }).render("#paypal-container-BTM5RW8GGT7US");</script>
     </div>
   </section>
-
-  <footer>
-    &copy; 2025 Deadline Astrology. All rights reserved. | <a href="mailto:your-email@example.com">Contact Us</a>
-  </footer>
+  <footer>&copy; 2025 Deadline Astrology. All rights reserved.</footer>
 </body>
-
 </html>
