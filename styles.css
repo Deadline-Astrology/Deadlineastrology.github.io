@@ -1,220 +1,96 @@
-/* General Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
-  font-family: 'UnifrakturCook', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  padding-top: 80px; /* Make sure the content is not hidden behind the fixed header */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'UnifrakturCook', cursive;
+  background: #f4f4f4;
+  color: #333;
+  padding-top: 100px; /* Ensures content appears below fixed header */
 }
 
 /* Header */
-#header-container {
+header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  background-color: #333;
+  background-color: #222;
   color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  font-size: 1.5em;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
 }
 
-#header-container h1 {
-  font-size: 1.8em;
-  animation: fadeIn 1.5s ease-in-out;
+header h1 {
+  font-size: 2em;
 }
 
-#header-container nav {
-  display: flex;
-  gap: 20px;
-}
-
-#header-container nav a {
+nav a {
   color: white;
+  margin-left: 25px;
   text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
+  font-size: 1.2em;
+  transition: color 0.3s;
 }
 
-#header-container nav a:hover {
-  color: #ffab00; /* Highlight color on hover */
+nav a:hover {
+  color: #ffd700;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Banner Image */
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 /* Home Section */
 #home {
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
-  background-color: #fff;
-  margin-top: 80px; /* Prevent overlap with the fixed header */
-  animation: fadeIn 2s ease-in-out;
+  background: white;
 }
 
 #home h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #333;
 }
 
 #home p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #555;
-}
-
-/* Services Section */
-#services {
-  padding: 60px 20px;
-  background-color: #fff;
-}
-
-#services h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.services-banner img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  animation: fadeIn 3s ease-in-out;
-}
-
-.service {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  animation: fadeIn 3s ease-in-out;
-}
-
-.service-item {
-  flex: 1 1 23%;
-  min-width: 250px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-item h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.service-item p {
-  font-size: 1em;
-  color: #666;
-}
-
-.service-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.service-item a {
-  text-decoration: none;
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 10px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.service-item a:hover {
-  background-color: #444;
 }
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: white;
-  padding: 30px 20px;
   text-align: center;
-  margin-top: 40px;
-}
-
-footer a {
+  padding: 30px;
+  background-color: #222;
   color: white;
-  text-decoration: none;
+  margin-top: 60px;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* PayPal Button Container */
-.paypal-button-container {
-  text-align: center;
-  margin: 30px 0;
-}
-
-/* Mobile Responsiveness */
+/* Responsive */
 @media (max-width: 768px) {
-  #services .service {
+  .header-inner {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
-  .service-item {
-    flex: 1 1 100%;
-    margin-bottom: 20px;
-  }
-
-  #home h2 {
-    font-size: 2em;
-  }
-
-  .service-item h3 {
-    font-size: 1.3em;
-  }
-
-  .service-item p {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 480px) {
-  #home h2 {
-    font-size: 1.8em;
-  }
-  
-  .service-item h3 {
-    font-size: 1.2em;
-  }
-
-  .service-item p {
-    font-size: 0.85em;
+  nav a {
+    display: block;
+    margin: 10px 0;
   }
 }
