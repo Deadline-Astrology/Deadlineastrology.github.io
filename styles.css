@@ -37,6 +37,7 @@ section {
   padding: 4rem 1rem;
   animation: fadeIn 1s ease-in-out;
   margin-bottom: 80px; /* Ensure sections don't overlap footer */
+  display: block;
 }
 
 /* === Services Banner === */
@@ -58,7 +59,7 @@ section {
 /* === Services Grid === */
 .service {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ensure items are placed horizontally */
   gap: 2rem;
   padding: 0 2rem;
 }
@@ -69,6 +70,9 @@ section {
   padding: 2rem;
   transition: transform 0.3s, box-shadow 0.3s;
   animation: fadeInUp 1s ease forwards;
+  display: flex;
+  flex-direction: column; /* Ensure content is laid out vertically */
+  justify-content: flex-start;
 }
 
 .service-item:hover {
