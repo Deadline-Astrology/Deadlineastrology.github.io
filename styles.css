@@ -27,9 +27,9 @@ header {
 
 header.hover-effect {
   background-color: #111;
-  box-shadow: 0 8px 20px rgba(220, 20, 60, 0.5);
+  box-shadow: 0 8px 20px rgba(4, 120, 87, 0.5);
   transform: translateY(-2px);
-  border-bottom: 2px solid crimson;
+  border-bottom: 2px solid #047857;
 }
 
 /* === Hover Effect for Header Image === */
@@ -44,8 +44,8 @@ header.hover-effect {
 
 .astro-hover:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px crimson;
-  border-color: crimson;
+  box-shadow: 0 0 20px #047857;
+  border-color: #047857;
 }
 
 #header-container {
@@ -70,7 +70,7 @@ nav a {
 
 #main-nav a.active,
 nav a.active {
-  color: crimson;
+  color: #047857;
 }
 
 nav a:hover {
@@ -91,7 +91,7 @@ nav a:hover {
 }
 
 #menu-toggle:hover {
-  color: crimson;
+  color: #047857;
 }
 
 /* === Footer === */
@@ -136,26 +136,24 @@ section p {
 /* === PayPal Button Styles === */
 .paypal-button-container {
   width: 100%;
-  max-width: 300px; /* Set a max-width to make sure buttons are not too wide */
+  max-width: 300px;
   height: auto;
-  margin: 20px auto; /* Center the button */
-  display: block; /* Ensure it's not hidden */
+  margin: 20px auto;
+  display: block;
   position: relative;
-  z-index: 100; /* Ensure it's above other content */
+  z-index: 100;
   padding: 10px;
 }
 
-/* Make sure buttons are visible */
 .paypal-button-container iframe {
   width: 100% !important;
-  height: 50px !important; /* Adjust the height if needed */
+  height: 50px !important;
   border: none;
 }
 
-/* Optional: Make buttons responsive for smaller screens */
 @media screen and (max-width: 768px) {
   .paypal-button-container {
-    max-width: 100%; /* Allow the button to be full-width on smaller screens */
+    max-width: 100%;
   }
 }
 
@@ -182,7 +180,7 @@ section p {
   }
 
   #menu-toggle:hover {
-    color: crimson;
+    color: #047857;
   }
 
   @keyframes slideDown {
@@ -230,13 +228,13 @@ section p {
   }
 
   #main-nav.open a:hover {
-    color: crimson;
+    color: #047857;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 6px;
   }
 
   #main-nav.open a.active {
-    color: crimson;
+    color: #047857;
   }
 
   body.menu-open {
@@ -277,7 +275,7 @@ section p {
 
   #main-nav a:hover {
     background-color: rgba(255, 255, 255, 0.05);
-    color: crimson;
+    color: #047857;
   }
 
   #main-nav a::after {
@@ -287,7 +285,7 @@ section p {
     right: 20%;
     bottom: 6px;
     height: 2px;
-    background-color: crimson;
+    background-color: #047857;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
@@ -298,7 +296,7 @@ section p {
   }
 
   #main-nav a.active {
-    color: crimson;
+    color: #047857;
   }
 
   #main-nav a.active::after {
@@ -308,6 +306,6 @@ section p {
 
 /* === Focus Styles for Accessibility === */
 a:focus, #menu-toggle:focus {
-  outline: 2px solid crimson;
+  outline: 2px solid #047857;
   outline-offset: 4px;
 }
