@@ -1,4 +1,4 @@
-/* General Reset and Body Styling */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body {
   font-family: 'UnifrakturCook', sans-serif;
   line-height: 1.6;
   background-color: #f0f0f0;
-  padding-top: 70px; /* Ensure content doesn't get blocked by the fixed banner */
+  padding-top: 80px; /* Push content down to make space for fixed banner */
 }
 
 header {
@@ -28,20 +28,20 @@ footer {
   margin-top: 40px;
 }
 
-/* Header Styling */
+/* Fix for the header (fixed banner) */
 #header-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* Adjust as needed */
-  background-color: #333; /* Banner background color */
-  z-index: 1000; /* Keeps it above other elements */
+  height: 70px; /* Set height of the banner */
+  background-color: #333;
+  color: white;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white; /* Text color */
-  font-size: 1.5em; /* Adjust text size */
+  font-size: 1.5em;
 }
 
 /* Home Section Styling */
@@ -73,20 +73,20 @@ footer {
 }
 
 .services-banner img {
-  width: 100%; /* Ensures image is responsive */
-  max-height: 400px; /* Optional: adjust max height as needed */
+  width: 100%; /* Responsive image */
+  max-height: 400px; /* Optional: Adjust the max-height if needed */
   object-fit: cover;
 }
 
 .service {
   display: flex;
-  flex-wrap: wrap; /* Wraps items if they don’t fit in one row */
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
 }
 
 .service-item {
-  flex: 1 1 23%; /* Ensures flexible width, adjusts to screen size */
+  flex: 1 1 23%; /* Flexible width */
   min-width: 220px; /* Prevents items from becoming too narrow */
   background-color: #f1f1f1;
   padding: 20px;
@@ -103,12 +103,9 @@ footer {
 .service-item p {
   font-size: 1em;
   color: #333;
-}
-
-/* Fixes for Vertical Text in Services Section */
-.service-item p {
-  writing-mode: unset; /* Ensures the text is displayed horizontally */
-  transform: unset; /* Resets any previous transforms */
+  /* Reset possible vertical text styles */
+  writing-mode: unset;
+  transform: unset;
 }
 
 /* Footer Styling */
