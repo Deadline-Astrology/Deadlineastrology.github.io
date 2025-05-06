@@ -1,345 +1,121 @@
-/* === Global Reset === */
+/* General Reset and Body Styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* === Body Base === */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #0b0c10;
-  color: #f8f8f2;
+  font-family: 'UnifrakturCook', sans-serif;
   line-height: 1.6;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  padding-top: 70px; /* Added padding for fixed header */
+  background-color: #f0f0f0;
+  padding-top: 70px; /* Ensure content doesn't get blocked by the fixed banner */
 }
 
-/* === Headings === */
-h1, h2, h3, h4, h5 {
-  font-family: 'UnifrakturCook', cursive;
-  color: #ffcb6b;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px;
   text-align: center;
+  font-size: 1.8em;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* === Sections === */
-section {
-  padding: 4rem 1rem;
-  animation: fadeIn 1s ease-in-out;
-  margin-bottom: 80px; /* Ensure sections don't overlap footer */
-  display: block;
-}
-
-/* === Services Banner === */
-.services-banner {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
-  animation: slideDown 1s ease-in-out;
-}
-
-.services-banner img {
-  max-width: 90%;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  max-height: 300px;
-  object-fit: cover;
-}
-
-/* === Services Grid === */
-.service {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ensure items are placed horizontally */
-  gap: 2rem;
-  padding: 0 2rem;
-}
-
-.service-item {
-  background: #1f1f1f;
-  border-radius: 16px;
-  padding: 2rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-  animation: fadeInUp 1s ease forwards;
-  display: flex;
-  flex-direction: column; /* Ensure content is laid out vertically */
-  justify-content: flex-start;
-}
-
-.service-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-}
-
-.service-item p {
-  margin-bottom: 1.5rem;
-}
-
-/* === PayPal Buttons Styling === */
-#paypal-container-YZ5HKL584LPUY,
-#paypal-container-AA6QGJM8BQU56,
-#paypal-container-8FZTG6C6GT6B4,
-#paypal-container-BTM5RW8GGT7US {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.5rem;
-}
-
-/* === Footer === */
 footer {
+  background: #333;
+  color: #fff;
+  padding: 20px;
   text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  background-color: #111;
-  color: #aaa;
+  margin-top: 40px;
 }
 
-footer a {
-  color: #ffcb6b;
-  text-decoration: none;
-}
-
-/* === Navigation Menu === */
+/* Header Styling */
 #header-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #111;
-  padding: 1rem;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-}
-
-#header-container nav {
+  height: 60px; /* Adjust as needed */
+  background-color: #333; /* Banner background color */
+  z-index: 1000; /* Keeps it above other elements */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  color: white; /* Text color */
+  font-size: 1.5em; /* Adjust text size */
 }
 
-#header-container nav ul {
-  list-style: none;
+/* Home Section Styling */
+#home {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#home h2 {
+  font-size: 2.5em;
+}
+
+#home p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Services Section Styling */
+#services {
+  padding: 20px;
+  background-color: #fff;
+}
+
+#services h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services-banner img {
+  width: 100%; /* Ensures image is responsive */
+  max-height: 400px; /* Optional: adjust max height as needed */
+  object-fit: cover;
+}
+
+.service {
   display: flex;
+  flex-wrap: wrap; /* Wraps items if they don’t fit in one row */
+  justify-content: space-between;
+  gap: 20px;
 }
 
-#header-container nav ul li {
-  margin-right: 2rem;
+.service-item {
+  flex: 1 1 23%; /* Ensures flexible width, adjusts to screen size */
+  min-width: 220px; /* Prevents items from becoming too narrow */
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-#header-container nav ul li:last-child {
-  margin-right: 0;
+.service-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-#header-container nav a {
-  text-decoration: none;
-  color: #ffcb6b;
-  font-size: 1rem;
-  font-weight: bold;
+.service-item p {
+  font-size: 1em;
+  color: #333;
 }
 
-#header-container nav a:hover {
-  color: #fff;
-  text-decoration: underline;
+/* Fixes for Vertical Text in Services Section */
+.service-item p {
+  writing-mode: unset; /* Ensures the text is displayed horizontally */
+  transform: unset; /* Resets any previous transforms */
 }
 
-/* === Mobile Styles === */
-@media screen and (max-width: 768px) {
-  body {
-    padding-top: 70px; /* Space for fixed header */
-  }
-
-  #header-container {
-    padding: 1rem 1.5rem; /* Adjust padding on mobile */
-  }
-
-  #main-nav {
-    display: none;
-  }
-
-  #menu-toggle {
-    display: block;
-    margin-top: 10px;
-    font-size: 35px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-
-  #menu-toggle:hover {
-    color: #047857;
-  }
-
-  @keyframes slideDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  #main-nav.open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(51, 51, 51, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    position: fixed;
-    top: 70px;
-    left: 10px;
-    right: 10px;
-    z-index: 9999;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    padding: 20px 0;
-    animation: slideDown 0.4s ease forwards;
-    transition: all 0.3s ease-in-out;
-  }
-
-  #main-nav.open a {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 18px;
-    color: #fff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-  }
-
-  #main-nav.open a:last-child {
-    border-bottom: none;
-  }
-
-  #main-nav.open a:hover {
-    color: #047857;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 6px;
-  }
-
-  #main-nav.open a.active {
-    color: #047857;
-  }
-
-  body.menu-open {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-}
-
-/* === Desktop Styles === */
-@media screen and (min-width: 769px) {
-  #menu-toggle {
-    display: none;
-  }
-
-  #main-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin: 20px auto;
-    padding: 10px 0;
-    background-color: rgba(51, 51, 51, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    width: fit-content;
-    max-width: 90%;
-  }
-
-  #main-nav a {
-    color: #fff;
-    font-size: 18px;
-    padding: 12px 20px;
-    border-radius: 6px;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-
-  #main-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #047857;
-  }
-
-  #main-nav a::after {
-    content: '';
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    bottom: 6px;
-    height: 2px;
-    background-color: #047857;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-  }
-
-  #main-nav a:hover::after {
-    transform: scaleX(1);
-  }
-
-  #main-nav a.active {
-    color: #047857;
-  }
-
-  #main-nav a.active::after {
-    transform: scaleX(1);
-  }
-}
-
-/* === Focus Styles for Accessibility === */
-a:focus, #menu-toggle:focus {
-  outline: 2px solid #047857;
-  outline-offset: 4px;
-}
-
-/* === Animations === */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Footer Styling */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
 }
