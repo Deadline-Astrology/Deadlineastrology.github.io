@@ -8,59 +8,44 @@
 /* Base Styles */
 body {
   font-family: 'UnifrakturCook', cursive;
-  background: #f4f4f4;
+  background-color: #f5f5f5;
   color: #333;
-  padding-top: 100px; /* Ensures content appears below fixed header */
 }
 
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #222;
-  color: white;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 30px;
-}
-
-header h1 {
-  font-size: 2em;
-}
-
-nav a {
-  color: white;
-  margin-left: 25px;
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #ffd700;
-}
-
-/* Banner Image */
+/* Banner */
 .banner img {
   width: 100%;
   height: auto;
   max-height: 300px;
   object-fit: cover;
+  display: block;
 }
 
-/* Home Section */
-#home {
-  padding: 40px 20px;
+/* Navigation */
+.main-nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ffd700;
+}
+
+/* Main Content */
+main {
+  padding: 60px 20px;
   text-align: center;
-  background: white;
+  background-color: white;
 }
 
 #home h2 {
@@ -71,6 +56,12 @@ nav a:hover {
 #home p {
   font-size: 1.3em;
   color: #555;
+  margin-bottom: 40px;
+}
+
+/* PayPal Section */
+.paypal-section {
+  margin-top: 30px;
 }
 
 /* Footer */
@@ -84,13 +75,16 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .header-inner {
+  .main-nav {
     flex-direction: column;
-    text-align: center;
+    gap: 20px;
   }
 
-  nav a {
-    display: block;
-    margin: 10px 0;
+  #home h2 {
+    font-size: 2em;
+  }
+
+  #home p {
+    font-size: 1.1em;
   }
 }
