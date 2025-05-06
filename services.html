@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="header.js" defer></script>
 
-  <!-- PayPal SDK script to load the buttons -->
-  <script src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD&debug=true"></script>
+  <!-- PayPal SDK script to load the hosted buttons -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAA7Xz_enaMGOxo9WE9hyv0Yf4_6WZHxnH-1WAQFg5nyGRAS_i1uitHZTPdFmc_2UaF3vQssaUNDbmNE3g&components=hosted-buttons&enable-funding=venmo&currency=USD">
+  </script>
 </head>
 
 <body>
@@ -19,103 +21,60 @@
   <section id="services">
     <h2>🔮 Personal Readings & Services</h2>
     <div class="service">
+
       <!-- Swift Insight Section -->
       <div class="service-item">
         <h3>⚡️ Swift Insight — $10</h3>
         <p>One Question. One Clear Answer. Delivered to Your Inbox. Receive a personalized email reply and PDF summary within 24–48 hours.</p>
-        <div id="paypal-button-container-1" class="paypal-button-container"></div>
+        <div id="paypal-container-YZ5HKL584LPUY"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "YZ5HKL584LPUY",
+          }).render("#paypal-container-YZ5HKL584LPUY");
+        </script>
       </div>
 
       <!-- Personal Tarot Reading Section -->
       <div class="service-item">
         <h3>🃏 Personal Tarot Reading — $55</h3>
         <p>Unlimited questions, unlimited cards — your personal video reading and a beautifully designed PDF workbook to guide you.</p>
-        <div id="paypal-button-container-2" class="paypal-button-container"></div>
+        <div id="paypal-container-AA6QGJM8BQU56"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "AA6QGJM8BQU56",
+          }).render("#paypal-container-AA6QGJM8BQU56");
+        </script>
       </div>
 
       <!-- Personal Astrology Reading Section -->
       <div class="service-item">
         <h3>🔮 Personal Astrology Reading — $77</h3>
         <p>Discover your cosmic blueprint with a personalized astrology reading, delivered with care and insight.</p>
-        <div id="paypal-button-container-3" class="paypal-button-container"></div>
+        <div id="paypal-container-8FZTG6C6GT6B4"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "8FZTG6C6GT6B4",
+          }).render("#paypal-container-8FZTG6C6GT6B4");
+        </script>
       </div>
 
       <!-- Personal Astrology & Tarot Forecast Section -->
       <div class="service-item">
         <h3>🌕 Personal Astrology & Tarot Forecast — $144</h3>
         <p>A complete spiritual journey through astrology and tarot, including a personalized PDF and video summary.</p>
-        <div id="paypal-button-container-4" class="paypal-button-container"></div>
+        <div id="paypal-container-BTM5RW8GGT7US"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "BTM5RW8GGT7US",
+          }).render("#paypal-container-BTM5RW8GGT7US");
+        </script>
       </div>
+
     </div>
   </section>
 
   <footer>
     &copy; 2025 Deadline Astrology. All rights reserved. | <a href="mailto:your-email@example.com">Contact Us</a>
   </footer>
-
-  <script>
-    // Ensure PayPal buttons render after page load
-    window.onload = function() {
-      paypal.Buttons({
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: { value: '10.00' }
-            }]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Thank you for your purchase, ' + details.payer.name.given_name);
-          });
-        }
-      }).render('#paypal-button-container-1'); // Render PayPal button for Swift Insight
-
-      paypal.Buttons({
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: { value: '55.00' }
-            }]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Thank you for your purchase, ' + details.payer.name.given_name);
-          });
-        }
-      }).render('#paypal-button-container-2'); // Render PayPal button for Personal Tarot Reading
-
-      paypal.Buttons({
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: { value: '77.00' }
-            }]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Thank you for your purchase, ' + details.payer.name.given_name);
-          });
-        }
-      }).render('#paypal-button-container-3'); // Render PayPal button for Personal Astrology Reading
-
-      paypal.Buttons({
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: { value: '144.00' }
-            }]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Thank you for your purchase, ' + details.payer.name.given_name);
-          });
-        }
-      }).render('#paypal-button-container-4'); // Render PayPal button for Personal Astrology & Tarot Forecast
-    };
-  </script>
 </body>
 </html>
