@@ -3,18 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <title>{{ page.title }} | Deadline Astrology</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/header.js" defer></script>
 </head>
 <body>
   <header>
-    <h1><a href="/">Deadline Astrology</a></h1>
+    <a href="/index.html">
+      <img src="/assets/Finalbanner.png" alt="Deadline Astrology Banner" style="width:100%; border-radius:12px;" />
+    </a>
     <nav>
-      <a href="/">Home</a> | <a href="/blog/">Blog</a>
+      <a href="/index.html">Home</a> |
+      <a href="/about.html">About</a> |
+      <a href="/services.html">Readings</a> |
+      <a href="/shop.html">Shop</a> |
+      <a href="/blog/">Blog</a> |
+      <a href="/contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
     {{ content }}
   </main>
+
   <footer>
     <p>© 2025 Deadline Astrology</p>
   </footer>
