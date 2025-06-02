@@ -4,43 +4,22 @@ title: Blog
 permalink: /blog/
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{{ page.title }} - Deadline Astrology</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap">
-  <link rel="stylesheet" href="styles.css" />
-  <script src="header.js" defer></script>
-</head>
-
-<body>
-  <!-- Dynamic Header will load here -->
-  <div id="header-container"></div>
-
-  <section id="blog">
-    <h2>📰 Astrology Blog</h2>
-    <div class="blog-posts">
-      {% if site.posts != empty %}
-        {% for post in site.posts %}
-          <article class="blog-post">
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <small>{{ post.date | date: "%B %d, %Y" }}</small>
-            <p>{{ post.excerpt }}</p>
-          </article>
-        {% endfor %}
-      {% else %}
-        <div class="blog-post">
-          <h3>Latest Posts - COMING SOON</h3>
-          <p>Find the latest updates and cosmic insights here, to guide your journey through the stars.</p>
-        </div>
-      {% endif %}
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Deadline Astrology. All rights reserved.
-  </footer>
-</body>
-</html>
+<section id="blog">
+  <h2>📰 Astrology Blog</h2>
+  <div class="blog-posts">
+    {% if site.posts != empty %}
+      {% for post in site.posts %}
+        <article class="blog-post">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <small>{{ post.date | date: "%B %d, %Y" }}</small>
+          <p>{{ post.excerpt }}</p>
+        </article>
+      {% endfor %}
+    {% else %}
+      <div class="blog-post">
+        <h3>Latest Posts - COMING SOON</h3>
+        <p>Find the latest updates and cosmic insights here, to guide your journey through the stars.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
