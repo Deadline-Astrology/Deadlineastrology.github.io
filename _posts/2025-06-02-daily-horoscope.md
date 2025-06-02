@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Horoscope – June 3, 2025"
+title: "Daily Horoscope – June 2, 2025"
 ---
 
 🌞 **Aries**: You’re glowing — take action on your vision.  
