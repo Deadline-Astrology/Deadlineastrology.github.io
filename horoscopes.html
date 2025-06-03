@@ -1,25 +1,58 @@
 ---
 layout: default
 title: Horoscopes
-permalink: /blog/
+permalink: /horoscopes/
 ---
 
-<section id="blog">
-  <h2>📰 Astrology Blog</h2>
-  <div class="blog-posts">
-    {% if site.posts != empty %}
-      {% for post in site.posts %}
-        <article class="blog-post">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <small>{{ post.date | date: "%B %d, %Y" }}</small>
-          <p>{{ post.excerpt }}</p>
-        </article>
-      {% endfor %}
-    {% else %}
-      <div class="blog-post">
-        <h3>Latest Posts - COMING SOON</h3>
-        <p>Find the latest updates and cosmic insights here, to guide your journey through the stars.</p>
-      </div>
-    {% endif %}
-  </div>
-</section>
+<h1 style="text-align:center;">Horoscopes</h1>
+
+<div style="text-align:center; margin: 20px 0;">
+  <label for="horoscope-select"><strong>Select Horoscope Type:</strong></label>
+  <select id="horoscope-select" onchange="switchHoroscope()">
+    <option value="daily">Daily</option>
+    <option value="weekly">Weekly</option>
+    <option value="monthly">Monthly</option>
+  </select>
+</div>
+
+<div id="daily" class="horoscope-section">
+  <h2>Daily Horoscopes</h2>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.category == "daily" %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="weekly" class="horoscope-section" style="display:none;">
+  <h2>Weekly Horoscopes</h2>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.category == "weekly" %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="monthly" class="horoscope-section" style="display:none;">
+  <h2>Monthly Horoscopes</h2>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.category == "monthly" %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<script>
+function switchHoroscope() {
+  const value = document.getElementById('horoscope-select').value;
+  const sections = document.querySelectorAll('.horoscope-section');
+  sections.forEach(s => s.style.display = 'none');
+  document.getElementById(value).style.display = 'block';
+}
+</script>
