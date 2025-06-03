@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Daily Horoscope – June 2, 2025"
+date: 2025-06-02
+category: daily
+---
+
 🔭 Cosmic Forecast: Monday, June 3, 2025
 
 The sky hums with anxious intelligence.
