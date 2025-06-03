@@ -3,42 +3,20 @@ layout: default
 ---
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  min-height: 100vh;
-  font-family: inherit;
-}
-
-/* Left side GIF container */
-.gif-left {
-  flex: 0 0 300px; /* fixed width */
+.post-header {
   background-image: url('/assets/Daily_Horoscope.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh; /* full viewport height */
-}
-
-/* Right side content container */
-.content-right {
-  flex: 1;
-  padding: 2rem;
-  overflow-y: auto; /* scroll if content is long */
-}
-
-article h2 {
-  margin-top: 0;
+  height: 300px;
+  width: 100%;
 }
 </style>
 
-<div class="gif-left"></div>
+<div class="post-header"></div>
 
-<div class="content-right">
-  <article>
-    <h2>{{ page.title }}</h2>
-    <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
-    {{ content }}
-  </article>
-</div>
+<article>
+  <h2>{{ page.title }}</h2>
+  <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
+  {{ content }}
+</article>
