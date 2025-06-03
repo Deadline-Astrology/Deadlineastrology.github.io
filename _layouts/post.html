@@ -4,26 +4,38 @@ layout: default
 
 <style>
 body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  font-family: inherit;
+}
+
+/* Left side GIF container */
+.gif-left {
+  flex: 0 0 300px; /* fixed width */
   background-image: url('/assets/Daily_Horoscope.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; /* Keeps background fixed while scrolling */
-  margin: 0;
-  padding: 0;
+  height: 100vh; /* full viewport height */
 }
 
-.page-content {
-  background-color: rgba(255, 255, 255, 0.85); /* white semi-transparent background for readability */
-  max-width: 800px;
-  margin: 0 auto;
+/* Right side content container */
+.content-right {
+  flex: 1;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  overflow-y: auto; /* scroll if content is long */
+}
+
+article h2 {
+  margin-top: 0;
 }
 </style>
 
-<div class="page-content">
+<div class="gif-left"></div>
+
+<div class="content-right">
   <article>
     <h2>{{ page.title }}</h2>
     <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
