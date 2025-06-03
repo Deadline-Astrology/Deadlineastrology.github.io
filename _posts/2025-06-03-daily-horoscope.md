@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Daily Horoscope – June 2, 2025"
-date: 2025-06-02
+title: "Daily Horoscope – June 3, 2025"
+date: 2025-06-03
 category: daily
 ---
 
