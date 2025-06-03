@@ -18,25 +18,35 @@ Healings must happen now—before the window seals shut.
 
 Deadline: Venus exits Aries on June 6. Don’t ignore what aches.
 
+
+
 ♈︎ Aries
 Old wounds resurface when you feel unseen. With Venus and Chiron both in your sign, you're seduced by independence—but longing for soft touch. The Virgo Moon demands you show up for yourself first, even if no one claps. Saturn in your sign begins its test: what do you believe in when no one's watching?
 Window: Claim your worth before Venus leaves Aries on June 6.
 Affirmation: I am not too much for the right ones.
+
+
 
 ♉︎ Taurus
 There’s a hum beneath the noise—intuition whispering truths logic denies. With Gemini planets crowding your 2nd house, your values are being rewritten. The Virgo Moon stirs your desire for romance, art, and creative control, but Mars in Leo agitates your home life.
 Deadline: Use the fire before it burns the bridge.
 Power Word: Alignment.
 
+
+
 ♊︎ Gemini
 You're magnetic. Irresistible. And secretly unraveling. The spotlight (Sun, Mercury, Jupiter) feels both euphoric and exhausting. You can’t split yourself into a thousand faces just to keep everyone engaged. Virgo Moon reminds you: the body is the compass.
 Window: Before Mercury enters Cancer on June 8, say what haunts you.
 Call to Action: Say it before you swallow it again.
 
+
+
 ♋︎ Cancer
 You’re seeing what you’ve buried. Dreams, fears, buried rage. Gemini's grip on your 12th house creates mental fog, but it’s laced with divine clues. The Virgo Moon clears a corner of the mind. A message, a memory, a mistake—don’t run.
 Deadline: Jupiter exits Gemini on June 9. Accept the lesson now.
 Power Word: Reveal.
+
+
 
 ♌︎ Leo
 Mars lights a fire in your name—but are you chasing passion or escaping consequence? You want to be seen, admired, validated. But with Pluto retrograde in your 7th, someone else’s reflection might be distorting your view. The Virgo Moon calls for practicality. What do you actually need?
