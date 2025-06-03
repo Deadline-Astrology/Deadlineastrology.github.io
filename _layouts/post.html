@@ -2,6 +2,19 @@
 layout: default
 ---
 
+<style>
+.post-header {
+  background-image: url('/assets/Daily_Horoscope.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+</style>
+
+<div class="post-header"></div>
+
 <article>
   <h2>{{ page.title }}</h2>
   <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
