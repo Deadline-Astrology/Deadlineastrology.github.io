@@ -3,20 +3,30 @@ layout: default
 ---
 
 <style>
-.post-header {
+body {
   background-image: url('/assets/Daily_Horoscope.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 300px;
-  width: 100%;
+  background-attachment: fixed; /* Keeps background fixed while scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+.page-content {
+  background-color: rgba(255, 255, 255, 0.85); /* white semi-transparent background for readability */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 </style>
 
-<div class="post-header"></div>
-
-<article>
-  <h2>{{ page.title }}</h2>
-  <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
-  {{ content }}
-</article>
+<div class="page-content">
+  <article>
+    <h2>{{ page.title }}</h2>
+    <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
+    {{ content }}
+  </article>
+</div>
