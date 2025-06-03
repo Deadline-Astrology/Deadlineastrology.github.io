@@ -5,13 +5,6 @@ date: 2025-06-02
 category: daily
 ---
 
----
-layout: post
-title: "Daily Horoscope – June 2, 2025"
-date: 2025-06-02
-category: daily
----
-
 🌌 **COSMIC FORECAST: Monday, June 2, 2025**  
 The mind crackles. Gemini Sun, Mercury, and Jupiter flood the sky with ideas, yet clarity is not promised. Mental overload disguises itself as curiosity. Distractions multiply like static.
 
