@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   headerContainer.innerHTML = `
     <header>
       <a href="/index.html">
-        <img src="/assets/Finalbanner.png" alt="Deadline Astrology Banner" style="width:100%; border-radius:12px;" />
+        <img src="assets/Brown and White Gradient Horoscope Abstract LinkedIn Banner.gif" alt="Deadline Astrology Banner" style="width:100%; border-radius:12px;" />
       </a>
       <button id="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav id="main-nav">
