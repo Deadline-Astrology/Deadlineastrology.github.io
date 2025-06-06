@@ -5,43 +5,40 @@
   box-sizing: border-box;
 }
 
-/* Base Layout & Fonts */
+/* Body and Global Font */
 body {
   font-family: 'Inter', sans-serif;
-  background: url('/assets/Deadline_Astrology_bg.png') no-repeat center center fixed,
-              linear-gradient(to bottom, #0e0e0e, #1a1a1a); /* Fallback gradient */
-  background-size: cover;
-  color: #eaeaea;
-  line-height: 1.6;
   font-size: 16px;
+  line-height: 1.6;
+  color: #eaeaea;
   overflow-x: hidden;
+  background: url('/assets/final_bg_deadline.jpg') no-repeat center center fixed;
+  background-size: cover;
   position: relative;
-  z-index: 0;
 }
 
-/* Overlay for readability */
+/* Overlay for Readability */
 body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55); /* Adjust opacity for brightness */
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.75); /* Dark semi-transparent overlay */
   z-index: -1;
-  pointer-events: none;
 }
 
 /* Header */
 header {
   position: relative;
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.85);
   padding: 1rem 2rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid #333;
+  z-index: 2;
 }
 
-/* Navigation */
 #main-nav {
   display: flex;
   justify-content: center;
@@ -86,7 +83,7 @@ header {
   margin-top: 1rem;
 }
 
-/* Mobile Menu */
+/* Mobile Navigation */
 @media (max-width: 768px) {
   #main-nav {
     flex-direction: column;
@@ -104,18 +101,25 @@ header {
   }
 }
 
-/* Sections */
-section {
-  padding: 4rem 2rem;
+/* Main Section Wrapper */
+main, section, .blog-post, .service-item {
+  background: rgba(20, 20, 20, 0.85); /* Dark underlay for readability */
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
   max-width: 1000px;
-  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #006400; /* Emerald green */
+  font-family: 'UnifrakturCook', cursive;
 }
 
 h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #006400; /* Emerald green headings */
-  font-family: 'UnifrakturCook', cursive;
 }
 
 p, li {
@@ -129,7 +133,7 @@ a {
 
 /* Footer */
 footer {
-  background: #111;
+  background: rgba(17, 17, 17, 0.85);
   color: #aaa;
   text-align: center;
   padding: 2rem;
@@ -137,32 +141,21 @@ footer {
   border-top: 1px solid #333;
 }
 
-/* PayPal Service Items */
-.service-item {
-  background: #1e1e1e;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.service-item:hover {
-  transform: translateY(-5px);
-}
-
+/* Service Card Style */
 .service-item h3 {
   color: #fff;
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
 /* Blog Post */
 .blog-post {
-  background: #1a1a1a;
-  padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
 }
 
 /* Video Styling */
@@ -170,5 +163,9 @@ video {
   width: 100%;
   margin-top: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
 }
