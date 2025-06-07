@@ -1,11 +1,11 @@
-/* Reset */
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and Global Font */
+/* ========== GLOBAL STYLES ========== */
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 
-/* Overlay for Readability */
+/* Overlay for dark readability */
 body::before {
   content: "";
   position: fixed;
@@ -29,9 +29,8 @@ body::before {
   z-index: -1;
 }
 
-/* Header */
+/* ========== HEADER ========== */
 header {
-  position: relative;
   background-color: rgba(17, 17, 17, 0.85);
   padding: 1rem 2rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
@@ -39,11 +38,9 @@ header {
   z-index: 2;
 }
 
-/* Banner Image – Modern Look */
 header img.site-banner {
   width: 100%;
   max-height: 400px;
-  height: auto;
   object-fit: cover;
   border-radius: 16px;
   display: block;
@@ -56,7 +53,7 @@ header img.site-banner:hover {
   transform: scale(1.01);
 }
 
-/* Navigation */
+/* ========== NAVIGATION ========== */
 #main-nav {
   display: flex;
   justify-content: center;
@@ -91,7 +88,7 @@ header img.site-banner:hover {
   width: 100%;
 }
 
-/* Menu Toggle */
+/* ========== MOBILE MENU ========== */
 #menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -102,7 +99,6 @@ header img.site-banner:hover {
   margin-top: 1rem;
 }
 
-/* Mobile Navigation */
 @media (max-width: 768px) {
   #main-nav {
     flex-direction: column;
@@ -120,7 +116,7 @@ header img.site-banner:hover {
   }
 }
 
-/* Sections */
+/* ========== SECTIONS ========== */
 main, section, .blog-post, .service-item {
   background: rgba(20, 20, 20, 0.85);
   padding: 2rem;
@@ -130,88 +126,85 @@ main, section, .blog-post, .service-item {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Hero Section */
-#hero {
+/* ========== HERO SECTION ========== */
+#hero, #intro-actions {
   text-align: center;
   background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
-  padding-top: 4rem;
+  padding: 3rem 1rem;
 }
 
-#hero h1 {
+#hero h1,
+#intro-actions h1 {
   font-family: 'UnifrakturCook', cursive;
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #00cc66;
+  color: #ffffff;
 }
 
-#hero p {
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
-  color: #ddd;
+#hero p,
+#intro-actions p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-.button {
+/* ========== BUTTONS ========== */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button, .reading-button {
   background: #00cc66;
-  color: #000;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
+  color: #fff;
   text-decoration: none;
-  transition: background 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.button:hover {
-  background: #00e67a;
+.button:hover,
+.reading-button:hover {
+  background: #00994d;
+  transform: scale(1.05);
 }
 
-/* Headings */
-h1, h2, h3 {
-  color: #00cc66;
-  font-family: 'UnifrakturCook', cursive;
+/* ========== FORECAST VIDEO ========== */
+.forecast-video {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-h2 {
-  font-size: 2.5rem;
+/* ========== BLOG POST ========== */
+.blog-post {
+  text-align: left;
+}
+
+.blog-post h3 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-/* Paragraphs and Lists */
-p, li {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-a {
-  color: #ffd700;
-  text-decoration: underline;
-}
-
-/* Blog Images */
 .blog-img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 1rem 0;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-/* Video Styling */
-.forecast-video {
-  width: 100%;
-  margin-top: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-}
-
-/* Footer */
+/* ========== FOOTER ========== */
 footer {
   text-align: center;
   padding: 2rem;
-  background: rgba(17, 17, 17, 0.85);
-  border-top: 1px solid #333;
-  color: #aaa;
-  margin-top: 2rem;
   font-size: 0.9rem;
+  color: #aaa;
 }
