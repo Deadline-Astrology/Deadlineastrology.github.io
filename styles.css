@@ -39,6 +39,15 @@ header {
   z-index: 2;
 }
 
+header img.site-banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Navigation */
 #main-nav {
   display: flex;
   justify-content: center;
@@ -73,6 +82,7 @@ header {
   width: 100%;
 }
 
+/* Menu Toggle */
 #menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -141,31 +151,38 @@ footer {
   border-top: 1px solid #333;
 }
 
-/* Service Card Style */
-.service-item h3 {
-  color: #fff;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+/* Service Box Styling */
+.service-item {
+  background: rgba(30, 30, 30, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
 }
 
 .service-item:hover {
   transform: translateY(-5px);
 }
 
-/* Blog Post */
-.blog-post {
-  border-radius: 10px;
-  padding: 2rem;
+.service-item h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
-/* Video Styling */
+/* Blog Post */
+.blog-post {
+  background: rgba(26, 26, 26, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Video */
 video {
   width: 100%;
   margin-top: 2rem;
   border-radius: 12px;
-}
-
-/* Utility */
-.text-center {
-  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
