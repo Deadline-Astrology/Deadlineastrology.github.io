@@ -39,12 +39,16 @@ header {
   z-index: 2;
 }
 
+/* Banner Image */
 header img.site-banner {
   width: 100%;
-  max-height: 300px;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
   border-radius: 12px;
   display: block;
+  margin: 0 auto;
 }
 
 /* Navigation */
@@ -132,11 +136,13 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/* Paragraphs and List Items */
 p, li {
   font-size: 1.1rem;
   color: #ccc;
 }
 
+/* Link Color */
 a {
   color: #ffd700;
 }
@@ -147,42 +153,6 @@ footer {
   color: #aaa;
   text-align: center;
   padding: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   border-top: 1px solid #333;
-}
-
-/* Service Box Styling */
-.service-item {
-  background: rgba(30, 30, 30, 0.85);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.service-item:hover {
-  transform: translateY(-5px);
-}
-
-.service-item h3 {
-  color: #fff;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-/* Blog Post */
-.blog-post {
-  background: rgba(26, 26, 26, 0.85);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-/* Video */
-video {
-  width: 100%;
-  margin-top: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
