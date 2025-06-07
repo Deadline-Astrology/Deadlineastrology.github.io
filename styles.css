@@ -43,13 +43,13 @@ header {
 header img.site-banner {
   width: 100%;
   max-width: 100%;
-  height: auto;
-  max-height: 150px;
-  object-fit: contain;
+  height: 200px;
+  object-fit: cover;
   border-radius: 12px;
   display: block;
   margin: 0 auto;
 }
+
 
 /* Navigation */
 #main-nav {
