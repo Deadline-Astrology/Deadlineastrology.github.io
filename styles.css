@@ -17,6 +17,7 @@ body {
   position: relative;
 }
 
+/* Overlay for dark readability */
 body::before {
   content: "";
   position: fixed;
@@ -68,8 +69,7 @@ header img.site-banner:hover {
   font-weight: 500;
   padding: 0.5rem;
   position: relative;
-  animation: flicker 2s infinite alternate;
-  transition: color 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 #main-nav a::after {
@@ -88,9 +88,18 @@ header img.site-banner:hover {
   width: 100%;
 }
 
+/* Glow on hover */
 #main-nav a:hover {
   color: #66ffe0;
-  text-shadow: 0 0 5px #66ffe0, 0 0 10px #66ffe0, 0 0 20px #66ffe0;
+  text-shadow:
+    0 0 5px #66ffe0,
+    0 0 10px #66ffe0,
+    0 0 20px #66ffe0;
+}
+
+/* Flicker neon animation on click only */
+#main-nav a:active {
+  animation: flicker 1.2s linear;
 }
 
 /* ========== MOBILE MENU ========== */
@@ -152,7 +161,7 @@ main, section, .blog-post, .service-item {
   margin-bottom: 2rem;
 }
 
-/* ========== CTA BUTTONS ========== */
+/* ========== BUTTONS ========== */
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -169,13 +178,26 @@ main, section, .blog-post, .service-item {
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.1rem;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  user-select: none;
 }
 
+/* Glow on hover */
 .button:hover,
 .reading-button:hover {
   background: #00994d;
   transform: scale(1.05);
+  box-shadow:
+    0 0 8px #66ffe0,
+    0 0 16px #66ffe0,
+    0 0 32px #66ffe0;
+}
+
+/* Flicker neon animation on click only */
+.button:active,
+.reading-button:active {
+  animation: flicker 1.2s linear;
 }
 
 /* ========== FORECAST VIDEO ========== */
@@ -188,7 +210,7 @@ main, section, .blog-post, .service-item {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* ========== BLOG ========== */
+/* ========== BLOG POST ========== */
 .blog-post {
   text-align: left;
 }
@@ -196,8 +218,6 @@ main, section, .blog-post, .service-item {
 .blog-post h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-family: 'UnifrakturCook', cursive;
-  color: #b2d6ff;
 }
 
 .blog-img {
@@ -214,45 +234,19 @@ footer {
   padding: 2rem;
   font-size: 0.9rem;
   color: #aaa;
-  background: rgba(17, 17, 17, 0.85);
-  border-top: 1px solid #333;
-  margin-top: 2rem;
-}
-
-/* ========== TYPOGRAPHY & HEADINGS ========== */
-h1, h2, h3 {
-  font-family: 'UnifrakturCook', cursive;
-  color: #00cc66;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-p, li {
-  font-size: 1.1rem;
-  color: #ccc;
 }
 
 /* ========== NEON FLICKER ANIMATION ========== */
-a {
-  color: #b2d6ff;
-  text-decoration: none;
-  animation: flicker 2s infinite alternate;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #66ffe0;
-  text-shadow: 0 0 5px #66ffe0, 0 0 10px #66ffe0, 0 0 20px #66ffe0;
-}
-
 @keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    text-shadow: 0 0 5px #66ffe0, 0 0 10px #66ffe0, 0 0 20px #66ffe0;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
-  }
+  0%   { opacity: 1; }
+  5%   { opacity: 0.5; }
+  10%  { opacity: 1; }
+  15%  { opacity: 0.6; }
+  20%  { opacity: 1; }
+  30%  { opacity: 0.4; }
+  40%  { opacity: 1; }
+  60%  { opacity: 0.7; }
+  70%  { opacity: 1; }
+  85%  { opacity: 0.5; }
+  100% { opacity: 1; }
 }
