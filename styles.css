@@ -17,7 +17,6 @@ body {
   position: relative;
 }
 
-/* Overlay for dark readability */
 body::before {
   content: "";
   position: fixed;
@@ -64,11 +63,12 @@ header img.site-banner:hover {
 }
 
 #main-nav a {
-  color: #eaeaea;
+  color: #b2d6ff;
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem;
   position: relative;
+  animation: flicker 2s infinite alternate;
   transition: color 0.3s;
 }
 
@@ -86,6 +86,11 @@ header img.site-banner:hover {
 #main-nav a:hover::after,
 #main-nav a.active::after {
   width: 100%;
+}
+
+#main-nav a:hover {
+  color: #66ffe0;
+  text-shadow: 0 0 5px #66ffe0, 0 0 10px #66ffe0, 0 0 20px #66ffe0;
 }
 
 /* ========== MOBILE MENU ========== */
@@ -147,7 +152,7 @@ main, section, .blog-post, .service-item {
   margin-bottom: 2rem;
 }
 
-/* ========== BUTTONS ========== */
+/* ========== CTA BUTTONS ========== */
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -183,7 +188,7 @@ main, section, .blog-post, .service-item {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* ========== BLOG POST ========== */
+/* ========== BLOG ========== */
 .blog-post {
   text-align: left;
 }
@@ -191,6 +196,8 @@ main, section, .blog-post, .service-item {
 .blog-post h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-family: 'UnifrakturCook', cursive;
+  color: #b2d6ff;
 }
 
 .blog-img {
@@ -207,4 +214,45 @@ footer {
   padding: 2rem;
   font-size: 0.9rem;
   color: #aaa;
+  background: rgba(17, 17, 17, 0.85);
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
+
+/* ========== TYPOGRAPHY & HEADINGS ========== */
+h1, h2, h3 {
+  font-family: 'UnifrakturCook', cursive;
+  color: #00cc66;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p, li {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* ========== NEON FLICKER ANIMATION ========== */
+a {
+  color: #b2d6ff;
+  text-decoration: none;
+  animation: flicker 2s infinite alternate;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #66ffe0;
+  text-shadow: 0 0 5px #66ffe0, 0 0 10px #66ffe0, 0 0 20px #66ffe0;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 5px #66ffe0, 0 0 10px #66ffe0, 0 0 20px #66ffe0;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
 }
