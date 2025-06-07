@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   headerContainer.innerHTML = `
     <header>
       <a href="/index.html">
-        <img src="/assets/deadline-banner.gif" 
+        <img src="/assets/Deadline-Banner.png" 
              alt="Deadline Astrology Banner" 
-             style="width:100%; max-height:300px; object-fit:cover; border-radius:12px;" />
+             class="site-banner" />
       </a>
       <button id="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav id="main-nav">
