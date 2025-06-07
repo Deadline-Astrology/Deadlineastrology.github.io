@@ -18,6 +18,7 @@
       max-width: 400px;
       margin: 1rem auto;
     }
+
     /* Button style */
     .button {
       background: #00cc66;
@@ -35,12 +36,46 @@
       background: #00994d;
       transform: scale(1.05);
     }
+
+    /* Flex layout for heading and image */
+    .about-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .about-header img {
+      max-width: 120px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 600px) {
+      .about-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* CTA button section */
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
   </style>
 </head>
 <body>
   <div id="header-container"></div>
+
   <section id="about">
-    <h2>🔮 About Deadline Astrology</h2>
+    <div class="about-header">
+      <h2>🔮 About Deadline Astrology</h2>
+      <img src="assets/face_pic.png" alt="Saint Nicky JK">
+    </div>
+
     <h3>Deadline Astrology – Horoscopes With Deadlines</h3>
     <p>
       Most horoscopes tell you what’s happening today. <strong>Deadline Astrology</strong> tells you what’s <em>coming</em>. We deliver transit-based horoscopes to help you stay spiritually ahead of schedule—prepared, not surprised. This is astrology designed for action: where intuition meets timing, and insight comes with a built-in deadline.
@@ -59,34 +94,14 @@
       Before that experience, Nicky was a firm atheist. Spirituality, the unseen, the paranormal—it all seemed like fantasy. But on <strong>January 13, 2013</strong>, 13 days before his 17th birthday, his mother passed away. As they pulled the plug on her life support, a <strong>white light</strong> filled the hospital room and gave him a message: <em>“Sing over your guitar.”</em>
     </p>
     <p>
-      The next day, he wrote a song that doubled as a <strong>séance ritual</strong>. As he performed it in his Nan’s basement, a sparkling, angelic presence appeared and gently touched his left arm. It was his mother. She had returned to let him know everything would be okay. From that moment, his worldview shattered and reassembled—this time rooted in the spiritual and unseen.
+      The next day, he wrote a song that doubled as a <strong>séance ritual</strong>. As he performed it in his Nan’s basement, a sparkling, angelic presence appeared and gently touched his left arm. It was his mother. She had returned to let him know everything would be okay.
     </p>
 
-    <h3>🌟 The Path of Saint Nicky JK</h3>
-    <p>
-      Ever since that spiritual awakening, Saint Nicky JK has been on a journey of deep discovery—physically, mentally, emotionally, and spiritually. His path has taken him through studies in <strong>chakras, clairvoyance, yoga, psychic mediumship, telekinesis, astral projection, and remote viewing</strong>. But above all, his purpose has been to connect with others from a heart-centered space—through Spirit, music, and insight.
-    </p>
-    <p>
-      Though he no longer works at the YMCA, he once served as a <strong>personal trainer and wellness coach</strong>, developing his deep interest in mind-body-spirit practices. He now combines that experience with astrology through his signature offering: the <strong>Moon Phase Fitness Theory</strong>. Sign up to the email list to receive a free copy of this transformative eBook—including 10 mystical workout plans aligned with the moon!
-    </p>
-
-    <h3>✨ Live Chat Readings and Music</h3>
-    <ul>
-      <li><a href="https://soundcloud.com/user-817956674/sets" target="_blank" rel="noopener noreferrer" class="button">🎵 Listen to Saint Nicky JK's Music</a></li>
-    </ul>
-<div class="cta-buttons">
-  <a href="https://psychic.bitwine.com/psychics/497617-timeline_astrology" 
-     class="button" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    🔮 Live Psychic Chat Reading With Me (First 5 Minutes Free!)
-  </a>
-</div>
-
-    <p>
-      From the ashes of heartbreak to the heights of cosmic insight, Deadline Astrology is not just a service—it’s a spiritual movement. Your timeline has a purpose. Let’s keep you aligned with it.
-    </p>
+    <div class="cta-buttons">
+      <a href="https://psychic.bitwine.com/psychics/497617-timeline_astrology" class="button" target="_blank" rel="noopener noreferrer">
+        🔮 Live Chat Reading (First 5 Minutes Free)
+      </a>
+    </div>
   </section>
-  <footer>&copy; 2025 Deadline Astrology. All rights reserved.</footer>
 </body>
 </html>
