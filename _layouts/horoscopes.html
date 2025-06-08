@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  <h1>{{ page.title }}</h1>
+
+  <div class="zodiac-list">
+    {% assign zodiacs = "aries,taurus,gemini,cancer,leo,virgo,libra,scorpio,sagittarius,capricorn,aquarius,pisces" | split: "," %}
+    <ul>
+    {% for sign in zodiacs %}
+      <li>
+        <a href="/horoscopes/{{ sign }}/">{{ sign | capitalize }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
